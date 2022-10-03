@@ -12,4 +12,10 @@ Este proyecto está dirigido a aquellas personas que desean llevar un estilo de 
 El usuario podrá rastrear su progreso por medio de gráficas y otras estadísticas. 
 
 Los recursos que se utilizarán son los siguientes:
-* https://wger.de/en/software/api
+* https://wger.de/en/software/api   --> API para obtener las rutinas de ejercicios 
+* https://www.nutritionix.com/business/api --> API para obtener recetas de alimentos
+
+Librerías externas a utilizar:
+Jetpack Navigation 
+Retrofit2 
+Coil 
