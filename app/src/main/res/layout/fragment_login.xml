@@ -43,7 +43,7 @@
         android:id="@+id/login_msg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/white"
         android:text="@string/login_msg2"
@@ -64,7 +64,8 @@
             android:id="@+id/login_email_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

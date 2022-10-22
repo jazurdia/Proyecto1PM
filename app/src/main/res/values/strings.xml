@@ -7,4 +7,7 @@
     <string name="introduce_tu_correo_electr_nico">Introduce tu correo electrónico</string>
     <string name="no_tienes_cuenta">¿No tienes cuenta?,</string>
     <string name="registrate">!Registrate!</string>
+    <string name="registrateTxt">¡Registrate!</string>
+    <string name="ingresa_tu_correo_electr_nico">Ingresa tu correo electrónico</string>
+    <string name="ingresa_tu_contrase_a">Ingresa tu contraseña</string>
 </resources>
