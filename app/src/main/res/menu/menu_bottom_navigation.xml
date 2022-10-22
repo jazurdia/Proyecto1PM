@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_workoutPlans"
+        android:title="Workout Plans"
+        android:icon="@drawable/ic_baseline_fitness_center_24"
+        />
+    <item
+        android:id="@+id/action_Alimentacion"
+        android:title="Alimentación"
+        android:icon="@drawable/ic_baseline_restaurant_24"
+        />
+    <item
+        android:id="@+id/action_Progreso"
+        android:title="Progreso"
+        android:icon="@drawable/ic_baseline_trending_up_24"
+        />
+
+</menu>
