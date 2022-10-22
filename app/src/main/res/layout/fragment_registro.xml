@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.Registro"
     android:background="#1B6962">
-    >
-
 
     <ImageView
         android:id="@+id/registro_logo"
