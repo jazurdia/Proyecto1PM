@@ -1,14 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1B6962"
     tools:context=".fragments.usuario.UsuarioMain">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/usuariomain_fotoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/usuariomain_username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+
+
+        android:text="@string/username"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_fotoUsuario" />
+
+    <TextView
+        android:id="@+id/usuariomain_rachaFijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Racha:  "
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_username"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_username" />
+
+    <TextView
+        android:id="@+id/usuariomain_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="14 días"
+        android:layout_marginEnd="50dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/usuariomain_username"
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_rachaFijo" />
+
+    <TextView
+        android:id="@+id/usuariomain_kgperdidosFijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="KG perdidos"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_rachaFijo"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_rachaFijo" />
+
+    <TextView
+        android:id="@+id/usuariomain_kgperdidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/usuariomain_dias"
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_kgperdidosFijo" />
+
+    <ImageView
+        android:id="@+id/usuariomain_iconoObjetivoUsuario"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_username"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_kgperdidosFijo" />
+
+    <TextView
+        android:id="@+id/usuariomain_objetivoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Objetivos del usuario"
+        android:textColor="@color/white"
+
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoObjetivoUsuario"
+        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoObjetivoUsuario"
+
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoObjetivoUsuario"
+
+        />
+
+    <ImageView
+        android:id="@+id/usuariomain_iconoActualizarDatos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@android:drawable/ic_menu_myplaces"
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_iconoObjetivoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_iconoObjetivoUsuario" />
+
+    <TextView
+        android:id="@+id/usuariomain_actualizarDatos"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/actuilizar_datos"
+        android:textColor="@color/white"
+
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoActualizarDatos"
+        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoActualizarDatos"
+
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoActualizarDatos"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/usuariomain_iconoConfiguraciones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@android:drawable/ic_dialog_info"
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_iconoActualizarDatos"
+        app:layout_constraintTop_toBottomOf="@+id/usuariomain_iconoActualizarDatos" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/otras_configuraciones"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoConfiguraciones"
+        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoConfiguraciones"
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoConfiguraciones"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
