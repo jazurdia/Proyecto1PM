@@ -61,7 +61,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_msg1">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/login_email_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
@@ -78,7 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/login_password_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
@@ -89,8 +87,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Button"
+        android:background="@drawable/square_with_rounded_corners"
 
+        android:text="Continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
@@ -110,8 +109,10 @@
         android:id="@+id/login_registrateTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fontFamily="sans-serif-black"
         android:text="@string/registrate"
-        android:textColor="#7F51D2"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/login_password"
         app:layout_constraintStart_toEndOf="@+id/login_notienecuenta"
         app:layout_constraintTop_toTopOf="@+id/login_notienecuenta" />
