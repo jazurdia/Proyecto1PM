@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="@+id/usuariomain_dias"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_kgperdidosFijo" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/usuariomain_iconoObjetivoUsuario"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -104,7 +104,7 @@
 
         />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/usuariomain_iconoActualizarDatos"
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -129,7 +129,7 @@
         app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoActualizarDatos"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/usuariomain_iconoConfiguraciones"
         android:layout_width="30dp"
         android:layout_height="30dp"
