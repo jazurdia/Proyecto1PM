@@ -16,4 +16,62 @@
     <string name="enfoque_del_usuario">Enfoque del usuario</string>
     <string name="masa_del_usuario">Masa del usuario</string>
     <string name="peso_inicial">Peso Inicial:</string>
+
+
+    <string-array name="enfoque_del_usuario_array">
+        <item>Perder peso</item>
+        <item>Mantener peso</item>
+        <item>Ganar peso</item>
+    </string-array>
+
+    <string-array name="masa_del_usuario_array">
+        <item>Baja</item>
+        <item>Media</item>
+        <item>Alta</item>
+    </string-array>
+
+    <string-array name="porcentaje_de_grasa_array">
+        <item>10%</item>
+        <item>20%</item>
+        <item>30%</item>
+        <item>40%</item>
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+        <item>90%</item>
+        <item>100%</item>
+    </string-array>
+
+    <string-array name="altura_del_usuario_array">
+        <item>1.40</item>
+        <item>1.50</item>
+        <item>1.60</item>
+        <item>1.70</item>
+        <item>1.80</item>
+        <item>1.90</item>
+        <item>2.00</item>
+        <item>2.10</item>
+    </string-array>
+
+    <string-array name="edad_del_usuario_array">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+
+    <string_array name = "meta_inicial_array">
+        <item>Perder peso</item>
+        <item>Mantener peso</item>
+        <item>Ganar peso</item>
+    </string_array>
+
+
 </resources>
