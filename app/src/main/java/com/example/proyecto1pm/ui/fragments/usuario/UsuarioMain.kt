@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.fragments.usuario
+package com.example.proyecto1pm.ui.fragments.usuario
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
