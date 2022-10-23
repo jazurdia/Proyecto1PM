@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B6962"
+    android:background="@drawable/background_gradiente_verde_azulado"
     tools:context=".fragments.usuario.UsuarioMain">
 
     <ImageView

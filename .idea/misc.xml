@@ -4,13 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/LogoElevate_background.xml" value="0.2445" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/alimentacion_widget.xml" value="0.339" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/background_gradiente_verde_azulado.xml" value="0.339" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/background_items.xml" value="0.3155" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/background_usuariosecond_objetivosprincipales.xml" value="0.3155" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/background_workout_details.xml" value="0.3155" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/rounded_corners.xml" value="0.241" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/drawable/square_with_rounded_corners.xml" value="0.282" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/activity_main.xml" value="0.3390625" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_alimentacion_details.xml" value="0.35625" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_alimentacion_list.xml" value="0.35625" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_otras_configuraciones.xml" value="0.33" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_registro.xml" value="0.33" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_usuario_main.xml" value="0.33" />
-        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_usuario_second.xml" value="0.35625" />
+        <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/layout/fragment_usuario_second.xml" value="0.25" />
         <entry key="..\:/Users/aleaz/Documents/UVG/Semestre IV/Plataformas Moviles/Proyecto1PM/app/src/main/res/mipmap-anydpi-v26/LogoElevate.xml" value="0.2445" />
       </map>
     </option>

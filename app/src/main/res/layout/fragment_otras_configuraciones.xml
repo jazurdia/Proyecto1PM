@@ -5,7 +5,7 @@
     android:id="@+id/otrasconfiguraciones_layoutOutter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#17887E"
+    android:background="@drawable/background_gradiente_verde_azulado"
     tools:context=".fragments.usuario.OtrasConfiguraciones">
 
 
@@ -14,17 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#1B6962"
-
+        android:background="@drawable/rounded_corners"
         android:elevation="8dp"
 
         >
-
-
 
 
         <Spinner
@@ -55,8 +53,8 @@
             android:textColor="@color/white"
             android:textSize="20sp"
 
+            android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,6 +63,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+
             android:textColor="@color/white"
             android:textSize="20sp"
             android:text="@string/masa_del_usuario"
@@ -78,6 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Porcentaje de grasa"
+            android:fontFamily="sans-serif-medium"
+
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +101,8 @@
             android:id="@+id/otrasconfiguraciones_textview_alturaUsuario"
             android:layout_marginTop="32dp"
             android:text="Altura del usuario"
+            android:fontFamily="sans-serif-medium"
+
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -112,6 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:text="Edad del usuario"
+            android:fontFamily="sans-serif-medium"
+
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -147,6 +153,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:text="Meta Inicial"
+            android:fontFamily="sans-serif-medium"
+
             android:textColor="@color/white"
             android:textSize="20sp"
             android:id="@+id/otrasconfiguraciones_textview_metaInicial"

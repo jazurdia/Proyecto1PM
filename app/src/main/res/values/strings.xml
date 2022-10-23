@@ -15,4 +15,5 @@
     <string name="actuilizar_datos">Actuilizar datos</string>
     <string name="enfoque_del_usuario">Enfoque del usuario</string>
     <string name="masa_del_usuario">Masa del usuario</string>
+    <string name="peso_inicial">Peso Inicial:</string>
 </resources>
