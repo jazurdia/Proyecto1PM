@@ -26,5 +26,41 @@
         android:id="@+id/workoutList"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList"
         android:label="fragment_workout_list"
-        tools:layout="@layout/fragment_workout_list" />
+        tools:layout="@layout/fragment_workout_list" >
+        <action
+            android:id="@+id/action_workoutList_to_alimentacionList"
+            app:destination="@id/alimentacionList" />
+        <action
+            android:id="@+id/action_workoutList_to_workoutDetails"
+            app:destination="@id/workoutDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/alimentacionList"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
+        android:label="fragment_alimentacion_list"
+        tools:layout="@layout/fragment_alimentacion_list" >
+        <action
+            android:id="@+id/action_alimentacionList_to_workoutList"
+            app:destination="@id/workoutList" />
+        <action
+            android:id="@+id/action_alimentacionList_to_progreso"
+            app:destination="@id/progreso" />
+        <action
+            android:id="@+id/action_alimentacionList_to_alimentacionDetails3"
+            app:destination="@id/alimentacionDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutDetails"
+        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
+        android:label="fragment_workout_details"
+        tools:layout="@layout/fragment_workout_details" />
+    <fragment
+        android:id="@+id/progreso"
+        android:name="com.example.proyecto1pm.ui.fragments.Progreso"
+        android:label="fragment_progreso"
+        tools:layout="@layout/fragment_progreso" />
+    <fragment
+        android:id="@+id/alimentacionDetails"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
+        android:label="AlimentacionDetails" />
 </navigation>

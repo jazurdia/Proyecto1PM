@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.workoutplan.WorkoutDetails">
+    tools:context=".ui.fragments.alimentacion.AlimentacionList">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar_workoutDetails"
+        android:id="@+id/toolbar_FoodDetails"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,14 +24,14 @@
         android:background="@drawable/background_workout_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_workoutDetails"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_FoodDetails"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
         >
 
 
         <TextView
-            android:id="@+id/text_workoutName"
+            android:id="@+id/text_FoodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Food Name"
@@ -44,12 +45,12 @@
 
             />
         <TextView
-            android:id="@+id/text_workoutReps"
+            android:id="@+id/text_FoodCalories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calories"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_workoutName"
+            app:layout_constraintTop_toBottomOf="@id/text_FoodName"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:textSize="16dp"
@@ -58,8 +59,8 @@
         <ImageView
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:id="@+id/image_workout"
-            app:layout_constraintTop_toBottomOf="@id/text_workoutReps"
+            android:id="@+id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/text_FoodCalories"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
@@ -69,8 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Steps for elaboration"
-            android:id="@+id/text_workoutDescription"
-            app:layout_constraintTop_toBottomOf="@id/image_workout"
+            android:id="@+id/text_Foodrecipe_steps"
+            app:layout_constraintTop_toBottomOf="@id/image_food"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
@@ -86,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@id/text_workoutDescription"
+            app:layout_constraintTop_toBottomOf="@id/text_Foodrecipe_steps"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="10dp"
             />
@@ -94,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:id="@+id/text_workoutSteps"
+            android:id="@+id/text_FoodDescription"
             app:layout_constraintTop_toBottomOf="@id/divider"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="20dp"
