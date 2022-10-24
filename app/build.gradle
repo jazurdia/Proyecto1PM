@@ -53,6 +53,7 @@ dependencies {
 
     def coil_version = "2.2.1"
     implementation "io.coil-kt:coil:$coil_version"
+    implementation 'com.google.android.material:material:<version>'
 
     def room_version = "2.4.3"
     implementation "androidx.room:room-runtime:$room_version"
