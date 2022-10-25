@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.navigation.NavDirections
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto1pm.Data.database.Excersise
@@ -38,9 +39,15 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list), AdapterWorkout.Rec
     }
 
     override fun onWorkoutClicked(excersise: Excersise) {
-        val action = FragmentWorkoutList.actionFragmentWorkoutListToFragmentWorkoutDetail(excersise)
-        requireView().findNavController().navigate(action)
+        //navigate with nav controller
+        val action = WorkoutListDirections.actionWorkoutListToWorkoutDetails(excersise)
+        view?.findNavController()?.navigate(action)
     }
 
+
+}
+
+private fun Any.actionWorkoutListToWorkoutDetails(excersise: Excersise): NavDirections {
+    return WorkoutListDirections.actionWorkoutListToWorkoutDetails(excersise)
 
 }

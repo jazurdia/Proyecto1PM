@@ -53,7 +53,12 @@
         android:id="@+id/workoutDetails"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
         android:label="fragment_workout_details"
-        tools:layout="@layout/fragment_workout_details" />
+        tools:layout="@layout/fragment_workout_details">
+        <argument
+            android:name="workout"
+            app:argType="com.example.proyecto1pm.Data.database.Excersise" />
+    </fragment>
+
     <fragment
         android:id="@+id/progreso"
         android:name="com.example.proyecto1pm.ui.fragments.Progreso"
