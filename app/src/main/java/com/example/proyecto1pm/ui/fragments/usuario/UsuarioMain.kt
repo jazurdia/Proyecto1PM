@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.proyecto1pm.R
 
 
@@ -42,7 +44,7 @@ class UsuarioMain : Fragment (R.layout.fragment_usuario_main) {
 
     private fun onClickListener() {
         btn_objetivosUsuarios.setOnClickListener {
-            // Ir a fragment de objetivos
+            //requireView().findNavController().navigate()
         }
 
         btn_actualizarDatos.setOnClickListener {
@@ -52,6 +54,10 @@ class UsuarioMain : Fragment (R.layout.fragment_usuario_main) {
         btn_otrasConfiguraciones.setOnClickListener {
             // Ir a fragment de otras configuraciones
         }
+    }
+
+    private fun usuarioToObjetivos() {
+
     }
 
 
