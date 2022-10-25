@@ -38,7 +38,7 @@ class AdapterFood(private val dataSet: MutableList<Food>, private val listener: 
             getImage(food.image)
 
             layChar.setOnClickListener() {
-                listener.onWorkoutClicked(food)
+                listener.onFoodClicked(food)
             }
         }
 
@@ -55,7 +55,7 @@ class AdapterFood(private val dataSet: MutableList<Food>, private val listener: 
 
 
     interface RecyclerViewFoodClickHandler {
-        fun onWorkoutClicked(food: Food)
+        fun onFoodClicked(food: Food)
     }
 
     override fun getItemCount(): Int {

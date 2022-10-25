@@ -46,7 +46,7 @@
             android:id="@+id/action_alimentacionList_to_progreso"
             app:destination="@id/progreso" />
         <action
-            android:id="@+id/action_alimentacionList_to_alimentacionDetails3"
+            android:id="@+id/action_alimentacionList_to_alimentacionDetails"
             app:destination="@id/alimentacionDetails" />
     </fragment>
     <fragment
@@ -67,5 +67,9 @@
     <fragment
         android:id="@+id/alimentacionDetails"
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
-        android:label="AlimentacionDetails" />
+        android:label="AlimentacionDetails" >
+        <argument
+            android:name="alimentacion"
+            app:argType="com.example.proyecto1pm.Data.database.Food" />
+    </fragment>
 </navigation>

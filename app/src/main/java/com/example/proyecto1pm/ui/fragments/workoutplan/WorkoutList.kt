@@ -47,7 +47,3 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list), AdapterWorkout.Rec
 
 }
 
-private fun Any.actionWorkoutListToWorkoutDetails(excersise: Excersise): NavDirections {
-    return WorkoutListDirections.actionWorkoutListToWorkoutDetails(excersise)
-
-}

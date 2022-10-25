@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto1pm.Data.database.Food
+import com.example.proyecto1pm.Data.database.FoodData
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ui.adapters.AdapterFood
 
@@ -24,7 +28,7 @@ class AlimentacionList : Fragment(R.layout.fragment_alimentacion_list), AdapterF
         }
 
     private fun initRecycler() {
-        list = Data.getFoods()
+        list = FoodData.getFoods()
         adapter = AdapterFood(list, this)
 
         recycler.layoutManager = LinearLayoutManager(requireContext())

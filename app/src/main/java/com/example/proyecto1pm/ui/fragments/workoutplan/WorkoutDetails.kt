@@ -28,9 +28,10 @@ class WorkoutDetails : Fragment(R.layout.fragment_workout_details) {
             nombre = view.findViewById(R.id.text_workoutName)
             descripcion = view.findViewById(R.id.text_workoutSteps)
             reps = view.findViewById(R.id.text_workoutReps)
+            getExercise()
         }
 
-    private fun getWorkout() {
+    private fun getExercise() {
         nombre.text = args.workout.name
         descripcion.text = args.workout.description
         reps.text = args.workout.repetitions + " reps x " + args.workout.series + "series"
