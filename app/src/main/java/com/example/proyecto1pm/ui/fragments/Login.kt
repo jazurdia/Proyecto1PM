@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.example.proyecto1pm.R
 import com.google.android.material.textfield.TextInputLayout
 
@@ -47,15 +48,22 @@ class Login : Fragment(R.layout.fragment_login) {
     private fun loginIfUser(email: String, password2: String) {
         if (email == username && password == password) {
             //navigateToListScreen()
+            navigateToWorkoutScreen()
         } else {
             Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun navigateToWorkoutScreen() {
-        // falta definir el navController
+        requireView().findNavController().navigate(
+            LoginDirections.actionLoginToWorkoutList()
+        )
     }
 
-
+    private fun navigateToRegistroScreen() {
+        requireView().findNavController().navigate(
+            LoginDirections.actionLoginToRegistro()
+        )
+    }
 
 }
