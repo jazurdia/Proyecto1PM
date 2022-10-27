@@ -35,6 +35,7 @@ class Login : Fragment(R.layout.fragment_login) {
             }
 
             requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
+
         }
 
 

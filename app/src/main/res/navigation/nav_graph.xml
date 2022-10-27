@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_login_to_registro"
             app:destination="@id/registro" />
-        <action
-            android:id="@+id/action_login_to_workoutList"
-            app:destination="@id/workoutList" />
     </fragment>
     <fragment
         android:id="@+id/registro"
@@ -23,53 +20,57 @@
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro" />
     <fragment
+        android:id="@+id/workoutDetails"
+        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
+        android:label="fragment_workout_details"
+        tools:layout="@layout/fragment_workout_details" />
+    <fragment
+        android:id="@+id/alimentacionList"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
+        android:label="fragment_alimentacion_details"
+        tools:layout="@layout/fragment_alimentacion_details" />
+    <fragment
+        android:id="@+id/alimentacionDetails"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
+        android:label="AlimentacionDetails" >
+        <action
+            android:id="@+id/action_alimentacionDetails_to_alimentacionList"
+            app:destination="@id/alimentacionList" />
+    </fragment>
+    <fragment
         android:id="@+id/workoutList"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList"
         android:label="fragment_workout_list"
         tools:layout="@layout/fragment_workout_list" >
         <action
-            android:id="@+id/action_workoutList_to_alimentacionList"
-            app:destination="@id/alimentacionList" />
-        <action
             android:id="@+id/action_workoutList_to_workoutDetails"
             app:destination="@id/workoutDetails" />
     </fragment>
     <fragment
-        android:id="@+id/alimentacionList"
-        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
-        android:label="fragment_alimentacion_list"
-        tools:layout="@layout/fragment_alimentacion_list" >
-        <action
-            android:id="@+id/action_alimentacionList_to_workoutList"
-            app:destination="@id/workoutList" />
-        <action
-            android:id="@+id/action_alimentacionList_to_progreso"
-            app:destination="@id/progreso" />
-        <action
-            android:id="@+id/action_alimentacionList_to_alimentacionDetails"
-            app:destination="@id/alimentacionDetails" />
-    </fragment>
+        android:id="@+id/otrasConfiguraciones"
+        android:name="com.example.proyecto1pm.ui.fragments.usuario.OtrasConfiguraciones"
+        android:label="fragment_otras_configuraciones"
+        tools:layout="@layout/fragment_otras_configuraciones" />
     <fragment
-        android:id="@+id/workoutDetails"
-        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
-        android:label="fragment_workout_details"
-        tools:layout="@layout/fragment_workout_details">
-        <argument
-            android:name="workout"
-            app:argType="com.example.proyecto1pm.Data.database.Excersise" />
+        android:id="@+id/usuarioMain"
+        android:name="com.example.proyecto1pm.ui.fragments.usuario.UsuarioMain"
+        android:label="fragment_usuario_main"
+        tools:layout="@layout/fragment_usuario_main" >
+        <action
+            android:id="@+id/action_usuarioMain_to_otrasConfiguraciones"
+            app:destination="@id/otrasConfiguraciones" />
+        <action
+            android:id="@+id/action_usuarioMain_to_usuarioSecond"
+            app:destination="@id/usuarioSecond" />
     </fragment>
-
     <fragment
         android:id="@+id/progreso"
         android:name="com.example.proyecto1pm.ui.fragments.Progreso"
         android:label="fragment_progreso"
         tools:layout="@layout/fragment_progreso" />
     <fragment
-        android:id="@+id/alimentacionDetails"
-        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
-        android:label="AlimentacionDetails" >
-        <argument
-            android:name="alimentacion"
-            app:argType="com.example.proyecto1pm.Data.database.Food" />
-    </fragment>
+        android:id="@+id/usuarioSecond"
+        android:name="com.example.proyecto1pm.ui.fragments.usuario.UsuarioSecond"
+        android:label="fragment_usuario_second"
+        tools:layout="@layout/fragment_usuario_second" />
 </navigation>
