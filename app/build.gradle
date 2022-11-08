@@ -4,6 +4,7 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android' version '2.44' apply false // Hilt
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -70,6 +71,16 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.4'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+
+// Firebase version declaration
+    implementation platform('com.google.firebase:firebase-bom:31.0.1')
+    // Firebase auth
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Firebase firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Using coroutines with firebase
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4'
 
 
 }
