@@ -9,8 +9,8 @@ import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proyecto1pm.Data.database.Food
-import com.example.proyecto1pm.Data.database.FoodData
+import com.example.proyecto1pm.Data.Local.database.Food
+import com.example.proyecto1pm.Data.Local.database.FoodData
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ui.adapters.AdapterFood
 

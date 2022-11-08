@@ -13,12 +13,19 @@
         <action
             android:id="@+id/action_login_to_registro"
             app:destination="@id/registro" />
+        <action
+            android:id="@+id/action_login_to_workoutList"
+            app:destination="@id/workoutList" />
     </fragment>
     <fragment
         android:id="@+id/registro"
         android:name="com.example.proyecto1pm.ui.fragments.Registro"
         android:label="fragment_registro"
-        tools:layout="@layout/fragment_registro" />
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registro_to_workoutList"
+            app:destination="@id/workoutList" />
+    </fragment>
     <fragment
         android:id="@+id/workoutDetails"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"

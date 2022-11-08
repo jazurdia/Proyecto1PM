@@ -9,8 +9,8 @@ import android.widget.Adapter
 import androidx.navigation.NavDirections
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proyecto1pm.Data.database.Excersise
-import com.example.proyecto1pm.Data.database.ExcersiseData
+import com.example.proyecto1pm.Data.Local.database.Excersise
+import com.example.proyecto1pm.Data.Local.database.ExcersiseData
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.databinding.FragmentWorkoutListBinding
 import com.example.proyecto1pm.ui.adapters.AdapterWorkout

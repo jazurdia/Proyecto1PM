@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.Data.database
+package com.example.proyecto1pm.Data.Local.database
 
 import java.io.Serializable
 

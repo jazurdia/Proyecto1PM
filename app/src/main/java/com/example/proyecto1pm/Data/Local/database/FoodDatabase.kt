@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.Data.database
+package com.example.proyecto1pm.Data.Local.database
 
 data class Food(
     val name : String = "",
