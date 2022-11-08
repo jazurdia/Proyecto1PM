@@ -11,7 +11,7 @@ import coil.transform.CircleCropTransformation
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto1pm.R
-import com.example.proyecto1pm.Data.Local.database.Food
+import com.example.proyecto1pm.Data.database.Food
 
 class AdapterFood(private val dataSet: MutableList<Food>, private val listener: RecyclerViewFoodClickHandler) : RecyclerView.Adapter<AdapterFood.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

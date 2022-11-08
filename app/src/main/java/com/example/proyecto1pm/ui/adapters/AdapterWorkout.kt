@@ -11,7 +11,7 @@ import coil.transform.CircleCropTransformation
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto1pm.R
-import com.example.proyecto1pm.Data.Local.database.Excersise
+import com.example.proyecto1pm.Data.database.Excersise
 
 class AdapterWorkout(private val dataSet: MutableList<Excersise>, private val listener: RecyclerViewWorkoutClickHandler) : RecyclerView.Adapter<AdapterWorkout.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

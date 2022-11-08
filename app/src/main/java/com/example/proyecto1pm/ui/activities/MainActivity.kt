@@ -15,26 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bottomNav= findViewById(R.id.bottom_navigation)
-
-    }
-
-    override fun onStart() {
-        super.onStart()
-        controlador = findNavController(R.id.fragmentContainer_mainActivity)
-        controlador.navigate(R.id.login)
-    }
-
-    fun setListeners(){
-        //usar controlador de navegacion para los fragments
-        bottomNav.setOnItemReselectedListener{
-            item ->
-            when(item.itemId){
-                R.id.action_workoutPlans -> controlador.navigate(R.id.workoutList)
-                R.id.action_Alimentacion -> controlador.navigate(R.id.alimentacionList)
-                R.id.action_Progreso -> controlador.navigate(R.id.progreso)
-            }
-        }
-
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer_mainActivity) as NavHostFragment
+        controlador = navHostFragment.navController
+        setContentView(R.layout.activity_main)
     }
 }
