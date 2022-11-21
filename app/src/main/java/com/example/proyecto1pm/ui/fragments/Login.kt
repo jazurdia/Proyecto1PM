@@ -23,19 +23,14 @@ class Login : Fragment(R.layout.fragment_login) {
     private var password: String = "@password"
     private lateinit var toRegistro: TextView
 
-
-
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
-
             view.apply {
                 inputEmail = findViewById(R.id.login_email)
                 inputPassword = findViewById(R.id.login_password)
                 buttonLogin = findViewById(R.id.login_continuarbtn)
             }
-
             requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
-
         }
 
 
@@ -58,9 +53,7 @@ class Login : Fragment(R.layout.fragment_login) {
     }
 
     private fun navigateToWorkoutScreen() {
-        requireView().findNavController().navigate(
-            LoginDirections.actionLoginToWorkoutList()
-        )
+        requireView().findNavController().navigate(R.id.action_login_to_workoutList) //Se debe modificar navigate() por que esta forma no puede compartir parámetros.
     }
 
     private fun navigateToRegistroScreen() {

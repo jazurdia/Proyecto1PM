@@ -13,12 +13,19 @@
         <action
             android:id="@+id/action_login_to_registro"
             app:destination="@id/registro" />
+        <action
+            android:id="@+id/action_login_to_workoutList"
+            app:destination="@id/workoutList" />
     </fragment>
+
+
     <fragment
         android:id="@+id/registro"
         android:name="com.example.proyecto1pm.ui.fragments.Registro"
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro" />
+
+
     <fragment
         android:id="@+id/workoutDetails"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
@@ -28,15 +35,15 @@
         android:id="@+id/alimentacionList"
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
         android:label="fragment_alimentacion_details"
-        tools:layout="@layout/fragment_alimentacion_details" />
+        tools:layout="@layout/fragment_alimentacion_details" >
+        <action
+            android:id="@+id/action_alimentacionList_to_alimentacionDetails"
+            app:destination="@id/alimentacionDetails" />
+    </fragment>
     <fragment
         android:id="@+id/alimentacionDetails"
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
-        android:label="AlimentacionDetails" >
-        <action
-            android:id="@+id/action_alimentacionDetails_to_alimentacionList"
-            app:destination="@id/alimentacionList" />
-    </fragment>
+        android:label="AlimentacionDetails" />
     <fragment
         android:id="@+id/workoutList"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList"
