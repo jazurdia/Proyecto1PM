@@ -40,12 +40,9 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list), AdapterWorkout.Rec
 
     override fun onWorkoutClicked(excersise: Excersise) {
         //navigate with nav controller
+        val action = WorkoutListDirections.actionWorkoutListToWorkoutDetails(excersise)
+        requireView().findNavController().navigate(action)
 
-        // @pablo, voy a cambiar esto para que se pueda correr. Después lo pones como querras
-        // para que termine de funcionar.
-        //val action = WorkoutListDirections.actionWorkoutListToWorkoutDetails(excersise)
-        //view?.findNavController()?.navigate(action)
-        requireView().findNavController().navigate(R.id.action_workoutList_to_workoutDetails)
 
     }
 

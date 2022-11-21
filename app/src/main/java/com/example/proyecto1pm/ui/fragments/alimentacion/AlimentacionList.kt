@@ -39,11 +39,10 @@ class AlimentacionList : Fragment(R.layout.fragment_alimentacion_list), AdapterF
     override fun onFoodClicked(food: Food) {
         //navigate with nav controller
         // PABLO ESTO TAMBIEN LO CAMBIE.
-        //val action = AlimentacionListDirections.actionAlimentacionListToAlimentacionDetails(food)
-        //view?.findNavController()?.navigate(action)
+        val action = AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(food)
+        requireView().findNavController().navigate(action)
 
-        requireView().findNavController().navigate(R.id.action_alimentacionList_to_alimentacionDetails)
-        // actualicé el nav_graph.xml porque la action iba al revés.
+
 
     }
 
