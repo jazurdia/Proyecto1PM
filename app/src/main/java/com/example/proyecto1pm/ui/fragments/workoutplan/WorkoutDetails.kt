@@ -32,7 +32,7 @@ class WorkoutDetails : Fragment(R.layout.fragment_workout_details) {
         }
 
     private fun getExercise() {
-        nombre.text = args.excersise.name
+        nombre.text = args.excersise.name // Aquí marca un error "Unresolved reference: excersise"
         descripcion.text = args.excersise.description
         reps.text = args.excersise.repetitions + " reps x " + args.excersise.series + "series"
         getImage(args.excersise.image)
