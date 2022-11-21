@@ -1,11 +1,13 @@
 package com.example.proyecto1pm.Data.database
 
+import java.io.Serializable
+
 data class Food(
     val name : String = "",
     val recipe : String = "",
     val image : String = "",
     val calories : String = "",
-)
+) : Serializable
 
 object FoodData {
     private val foods = mutableListOf(
