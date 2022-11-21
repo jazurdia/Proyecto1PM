@@ -33,6 +33,8 @@ class UsuarioMain : Fragment (R.layout.fragment_usuario_main) {
             btn_actualizarDatos = findViewById(R.id.usuariomain_iconoActualizarDatos)
             btn_otrasConfiguraciones = findViewById(R.id.usuariomain_iconoConfiguraciones)
 
+            // agregar métodos para ir a los fragments.
+
 
             // Recordar que son TextView. Estos son los TextView "editables" a la derecha.
             username = findViewById(R.id.usuariomain_fotoUsuario)
@@ -56,7 +58,15 @@ class UsuarioMain : Fragment (R.layout.fragment_usuario_main) {
         }
     }
 
-    private fun usuarioToObjetivos() {
+    private fun asignarUsuario(){
+
+    }
+
+    private fun asignarracha(){
+
+    }
+
+    private fun asignarMasaPerdida(){
 
     }
 

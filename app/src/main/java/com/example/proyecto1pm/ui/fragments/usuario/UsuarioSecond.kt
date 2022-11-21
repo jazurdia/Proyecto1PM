@@ -29,29 +29,43 @@ class UsuarioSecond : Fragment(R.layout.fragment_usuario_second) {
         view.apply {
 
             pesoInicial = findViewById(R.id.usuariosecond_pesoinicial)
+            pesoInicial.setText(getData("pesoInicial"))
+
             pesoActual = findViewById(R.id.usuariosecond_pesoactual)
+            pesoActual.setText(getData("pesoActual"))
             pesoDeseado = findViewById(R.id.usuariosecond_pesodeseado)
+            pesoDeseado.setText(getData("pesoDeseado"))
             objetivoSemanal = findViewById(R.id.usuariosecond_objetivoSemanal)
+            objetivoSemanal.setText(getData("objetivoSemanal"))
             nivelActividad = findViewById(R.id.usuariosecond_nivelActividad)
+            nivelActividad.setText(getData("nivelActividad"))
             enfoqueActual = findViewById(R.id.usuariosecond_enfoqueActual)
+            enfoqueActual.setText(getData("enfoqueActual"))
             sesionesPorSemanas = findViewById(R.id.usuariosecond_sesionesPorSemana)
+            sesionesPorSemanas.setText(getData("sesionesPorSemanas"))
             minutosPorSesion = findViewById(R.id.usuariosecond_MinutosPorSesion)
+            minutosPorSesion.setText(getData("minutosPorSesion"))
         }
 
-        actualizarDatos()
+
 
     }
 
-    private fun actualizarDatos(){ // hay que definir métodos que vengan de la base de datos interna para actualizar los datos
-        pesoInicial.text = "80kg"
-        pesoActual.text = "70kg"
-        pesoDeseado.text = "60kg"
-        objetivoSemanal.text = "1kg"
-        nivelActividad.text = "Moderado"
-        enfoqueActual.text = "Perder peso"
-        sesionesPorSemanas.text = "3"
-        minutosPorSesion.text = "30"
+    private fun getData(s: String): String {
+        // Se debe return por el dato de db.
+        when(s){
+            "pesoInicial" -> return "pesoInicial"
+            "pesoActual" -> return "pesoActual"
+            "pesoDeseado" -> return "pesoDeseado"
+            "objetivoSemanal" -> return "objetivoSemanal"
+            "nivelActividad" -> return "nivelActividad"
+            "enfoqueActual" -> return "enfoqueActual"
+            "sesionesPorSemanas" -> return "sesionesPorSemanas"
+            "minutosPorSesion" -> return "minutosPorSesion"
+            else -> return "err"
+        }
     }
+
     
 
 
