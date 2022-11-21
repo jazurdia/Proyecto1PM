@@ -8,15 +8,15 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    private lateinit var bottomNav : BottomNavigationView
-    private lateinit var controlador: NavController
+    //private lateinit var bottomNav : BottomNavigationView
+    //private lateinit var controlador: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer_mainActivity) as NavHostFragment
-        controlador = navHostFragment.navController
+        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer_mainActivity) as NavHostFragment
+        //controlador = navHostFragment.navController
         setContentView(R.layout.activity_main)
     }
 }
