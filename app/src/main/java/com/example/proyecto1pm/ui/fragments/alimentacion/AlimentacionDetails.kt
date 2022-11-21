@@ -31,10 +31,10 @@ class AlimentacionDetails : Fragment(R.layout.fragment_alimentacion_details) {
     
     private fun getFood() {
         try{
-        nombre.text = args.alimentacion.name //Aquí marta un error. "Unresolved reference: alimentacion"
-        descripcion.text = args.alimentacion.recipe
-        calories.text = args.alimentacion.calories + " calorías"
-        getImage(args.alimentacion.image)
+        nombre.text = args.food.name
+        descripcion.text = args.food.recipe
+        calories.text = args.food.calories + " calorías"
+        getImage(args.food.image)
         }catch(e: Exception){
             println(e)
         }

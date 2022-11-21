@@ -36,7 +36,7 @@
         android:label="fragment_workout_details"
         tools:layout="@layout/fragment_workout_details" >
         <argument
-            android:name="Excersise"
+            android:name="excersise"
             app:argType="com.example.proyecto1pm.Data.database.Excersise" />
     </fragment>
     <fragment
@@ -81,7 +81,7 @@
         android:label="fragment_alimentacion_details"
         tools:layout="@layout/fragment_alimentacion_details" >
         <argument
-            android:name="Alimentacion"
+            android:name="food"
             app:argType="com.example.proyecto1pm.Data.database.Food" />
     </fragment>
     <fragment
