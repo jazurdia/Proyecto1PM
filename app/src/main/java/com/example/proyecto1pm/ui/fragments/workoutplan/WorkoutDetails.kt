@@ -32,10 +32,10 @@ class WorkoutDetails : Fragment(R.layout.fragment_workout_details) {
         }
 
     private fun getExercise() {
-        nombre.text = args.workout.name
-        descripcion.text = args.workout.description
-        reps.text = args.workout.repetitions + " reps x " + args.workout.series + "series"
-        getImage(args.workout.image)
+        nombre.text = args.excersise.name
+        descripcion.text = args.excersise.description
+        reps.text = args.excersise.repetitions + " reps x " + args.excersise.series + "series"
+        getImage(args.excersise.image)
     }
 
     private fun getImage(image: String) {
