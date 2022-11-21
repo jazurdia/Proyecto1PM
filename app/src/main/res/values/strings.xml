@@ -67,11 +67,11 @@
         <item>100</item>
     </string-array>
 
-    <string_array name="metainiciar_array">
+    <string-array name="metainiciar_array">
         <item>Perder peso</item>
         <item>Mantener peso</item>
         <item>Ganar peso</item>
-    </string_array>
+    </string-array>
 
 
 </resources>
