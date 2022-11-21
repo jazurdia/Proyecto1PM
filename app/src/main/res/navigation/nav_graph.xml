@@ -34,7 +34,11 @@
         android:id="@+id/workoutDetails"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutDetails"
         android:label="fragment_workout_details"
-        tools:layout="@layout/fragment_workout_details" />
+        tools:layout="@layout/fragment_workout_details" >
+        <argument
+            android:name="Excersise"
+            app:argType="com.example.proyecto1pm.Data.database.Excersise" />
+    </fragment>
     <fragment
         android:id="@+id/alimentacionList"
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
@@ -47,7 +51,12 @@
     <fragment
         android:id="@+id/alimentacionDetails"
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
-        android:label="AlimentacionDetails" />
+        android:label="AlimentacionDetails"
+        >
+        <argument
+            android:name="Food"
+            app:argType="com.example.proyecto1pm.Data.database.Food" />
+    </fragment>
     <fragment
         android:id="@+id/workoutList"
         android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList"
