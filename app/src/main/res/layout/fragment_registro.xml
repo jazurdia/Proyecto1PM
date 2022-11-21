@@ -33,58 +33,58 @@
         app:layout_constraintTop_toBottomOf="@+id/registro_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/registro_email_TextInputLayout"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/ingresa_tu_correo_electr_nico"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registro_registrateTxt">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:hint="Ingresa tu correo electrónico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registro_contrasena"
+        android:id="@+id/registro_password_TextInputLayout"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="@string/ingresa_tu_contrase_a"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/registro_email_TextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:hint="@string/ingresa_tu_contrase_a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/registro_confPassword_TextInputLayout"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Confirma tu contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registro_contrasena">
+        app:layout_constraintTop_toBottomOf="@+id/registro_password_TextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:hint="Confirma tu contraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/registro_btn"
+        android:id="@+id/registro_confirmar_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Continuar"
+        android:text="Confirmar"
         android:elevation="20dp"
         android:background="@drawable/square_with_rounded_corners"
         android:textColor="@color/white"
@@ -93,7 +93,8 @@
         android:backgroundTintMode="multiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/registro_confPassword_TextInputLayout"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

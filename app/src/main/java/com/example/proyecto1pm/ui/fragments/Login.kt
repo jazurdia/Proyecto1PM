@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.proyecto1pm.R
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
 
 
 class Login : Fragment(R.layout.fragment_login) {
@@ -61,5 +62,22 @@ class Login : Fragment(R.layout.fragment_login) {
             LoginDirections.actionLoginToRegistro()
         )
     }
+
+    // Métodos de Firebase
+    // Tal vez se queden sin usar otros métodos.
+
+
+    private fun setupAuth(){
+        var title = "Autenticación"
+        buttonLogin.setOnClickListener(
+            if inputEmail.text.isNotEmpty() && inputPassword.text.isNotEmpty(){
+                FirebaseAuth.getInstace()
+            }
+        )
+
+    }
+
+
+
 
 }

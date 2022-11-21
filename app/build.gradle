@@ -82,5 +82,10 @@ dependencies {
     // Using coroutines with firebase
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4'
 
+    // Firebase auth.
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+
+
 
 }
