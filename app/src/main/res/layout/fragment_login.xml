@@ -78,40 +78,43 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/login_continuarbtn"
+    <LinearLayout
+
+        android:id="@+id/login_layout_botones_LinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/square_with_rounded_corners"
-
-        android:text="Continuar"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+        app:layout_constraintTop_toBottomOf="@+id/login_password">
 
-    <TextView
-        android:id="@+id/login_notienecuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/no_tienes_cuenta"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@id/login_registrateTxt"
-        app:layout_constraintStart_toStartOf="@id/login_password"
-        app:layout_constraintTop_toBottomOf="@+id/login_continuarbtn" />
+        <Button
+            android:id="@+id/login_continuarbtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textSize="10dp"
+            />
 
-    <TextView
-        android:id="@+id/login_registrateTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/registrate"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/login_password"
-        app:layout_constraintStart_toEndOf="@+id/login_notienecuenta"
-        app:layout_constraintTop_toTopOf="@+id/login_notienecuenta" />
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+
+        <Button
+            android:id="@+id/login_signupbtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textSize="10dp"
+
+            />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

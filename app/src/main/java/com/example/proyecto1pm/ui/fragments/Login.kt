@@ -19,39 +19,25 @@ class Login : Fragment(R.layout.fragment_login) {
     private lateinit var inputEmail: TextInputLayout
     private lateinit var inputPassword: TextInputLayout
     private lateinit var buttonLogin: Button
+    private lateinit var signupbtn: Button
 
-    private var username: String = "@username"
-    private var password: String = "@password"
-    private lateinit var toRegistro: TextView
-
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-            view.apply {
-                inputEmail = findViewById(R.id.login_email)
-                inputPassword = findViewById(R.id.login_password)
-                buttonLogin = findViewById(R.id.login_continuarbtn)
-            }
-            requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.apply {
+            inputEmail = findViewById(R.id.login_email)
+            inputPassword = findViewById(R.id.login_password)
+            buttonLogin = findViewById(R.id.login_continuarbtn)
+            signupbtn = findViewById(R.id.login_signupbtn)
         }
+        requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
+
+        // métodos
+        acceder()
+        irARegistro()
 
 
-    private fun setListeners() {
-        buttonLogin.setOnClickListener {
-            loginIfUser(
-                email = inputEmail.editText!!.text.toString(),
-                password2 = inputPassword.editText!!.text.toString()
-            )
-        }
     }
 
-    private fun loginIfUser(email: String, password2: String) {
-        if (email == username && password == password) {
-            //navigateToListScreen()
-            navigateToWorkoutScreen()
-        } else {
-            Toast.makeText(requireContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-        }
-    }
 
     private fun navigateToWorkoutScreen() {
         requireView().findNavController().navigate(R.id.action_login_to_workoutList) //Se debe modificar navigate() por que esta forma no puede compartir parámetros.
@@ -65,19 +51,27 @@ class Login : Fragment(R.layout.fragment_login) {
 
     // Métodos de Firebase
     // Tal vez se queden sin usar otros métodos.
-
-
-    private fun setupAuth(){
-        var title = "Autenticación"
-        buttonLogin.setOnClickListener(
-            if inputEmail.text.isNotEmpty() && inputPassword.text.isNotEmpty(){
-                FirebaseAuth.getInstace()
+    private fun acceder(){
+        buttonLogin.setOnClickListener(){
+            if(inputEmail.editText!!.text.toString().isNotEmpty() && inputPassword.editText!!.text.toString().isNotEmpty()){
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(inputEmail.editText!!.text.toString(), inputPassword.editText!!.text.toString()).addOnCompleteListener {
+                    if(it.isSuccessful){
+                        navigateToWorkoutScreen()
+                    }else{
+                        Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }else{
+                Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
             }
-        )
-
+        }
     }
 
-
+    private fun irARegistro(){
+        signupbtn.setOnClickListener(){
+            navigateToRegistroScreen()
+        }
+    }
 
 
 }

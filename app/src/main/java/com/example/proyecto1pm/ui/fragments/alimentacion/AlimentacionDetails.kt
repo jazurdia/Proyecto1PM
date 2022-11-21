@@ -44,5 +44,4 @@ class AlimentacionDetails : Fragment(R.layout.fragment_alimentacion_details) {
         }
     }
 
-
 }

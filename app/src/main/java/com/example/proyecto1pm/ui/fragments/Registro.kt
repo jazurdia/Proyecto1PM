@@ -31,9 +31,11 @@ class Registro : Fragment(R.layout.fragment_registro) {
 
         }
 
+        registrarNuevoUsuario()
+
     }
 
-    private fun RegistrarNuevoUsuario() {
+    private fun registrarNuevoUsuario() {
 
         btn.setOnClickListener() {
             if (inputCorreo.editText!!.text.toString().isNotEmpty() && inputContraseña.editText!!.toString().isNotEmpty() && inputConfirmarContraseña.editText!!.toString().isNotEmpty()) {
@@ -45,7 +47,6 @@ class Registro : Fragment(R.layout.fragment_registro) {
 
                             // ir a workoutList
                             navigateToWorkoutListScreen()
-
 
                         }else{
                             Toast.makeText(requireContext(), "Error al registrar usuario", Toast.LENGTH_SHORT).show()
