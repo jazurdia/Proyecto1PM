@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.Login"
     android:background="#1B6962"
-
-
     >
-
-
 
     <!-- Asi se pone un comentario.  -->
 
