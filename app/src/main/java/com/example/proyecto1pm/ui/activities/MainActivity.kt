@@ -2,12 +2,12 @@ package com.example.proyecto1pm.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
+import com.example.proyecto1pm.ViewModel.MainViewModel
+import com.example.proyecto1pm.ViewModel.MainViewModelFactory
 import com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails
 import com.example.proyecto1pm.ui.fragments.user.Progreso
 import com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList
@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var bottomNav : BottomNavigationView
     //private lateinit var controlador: NavController
+
+    //private var viewModel : MainViewModel by viewModels { MainViewModelFactory(emtpyList()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
