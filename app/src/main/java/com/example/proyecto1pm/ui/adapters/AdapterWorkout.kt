@@ -59,6 +59,6 @@ class AdapterWorkout(private val dataSet: MutableList<Excersise>, private val li
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return dataSet.size
     }
 }

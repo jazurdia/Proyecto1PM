@@ -59,6 +59,8 @@ class AdapterFood(private val dataSet: MutableList<Food>, private val listener: 
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return dataSet.size
     }
+
+
 }
