@@ -29,12 +29,11 @@ class Login : Fragment(R.layout.fragment_login) {
         requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
 
         // métodos
-        acceder()
+        acceder2()
         irARegistro()
 
 
     }
-
 
     private fun navigateToWorkoutScreen() {
         requireView().findNavController().navigate(R.id.action_login_to_workoutList) //Se debe modificar navigate() por que esta forma no puede compartir parámetros.
@@ -58,6 +57,31 @@ class Login : Fragment(R.layout.fragment_login) {
                         Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
                     }
                 }
+            }else{
+                Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun acceder2(){
+        buttonLogin.setOnClickListener{
+            var email : String = inputEmail.editText!!.text.toString()
+            var password : String = inputPassword.editText!!.text.toString()
+            email = email.replace(" ", "")
+
+            if(email.isNotEmpty() && password.isNotEmpty()) {
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            navigateToWorkoutScreen()
+                        } else {
+                            Toast.makeText(
+                                requireContext(),
+                                "El usuario o la contraseña no son correctos",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
             }else{
                 Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
             }

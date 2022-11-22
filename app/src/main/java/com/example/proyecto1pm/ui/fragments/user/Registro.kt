@@ -29,7 +29,8 @@ class Registro : Fragment(R.layout.fragment_registro) {
 
         }
 
-        registrarNuevoUsuario()
+        //registrarNuevoUsuario()
+        registrar()
 
     }
 
@@ -60,6 +61,45 @@ class Registro : Fragment(R.layout.fragment_registro) {
             }
         }
 
+    }
+
+    private fun registrar(){
+        btn.setOnClickListener{
+            var correo : String = inputCorreo.editText!!.text.toString().replace(" ", "")
+            var contraseña : String = inputContraseña.editText!!.text.toString()
+            var confirmarContraseña : String = inputConfirmarContraseña.editText!!.text.toString()
+
+            if(correo.isNotEmpty() && contraseña.isNotEmpty() && confirmarContraseña.isNotEmpty()) {
+                if (contraseña == confirmarContraseña) {
+                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(correo, contraseña)
+                        .addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Usuario registrado",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Error al registrar usuario",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Las contraseñas no coinciden",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }else{
+                Toast.makeText(requireContext(), "Verifica tus datos", Toast.LENGTH_SHORT).show()
+            }
+
+
+        }
     }
 
     private fun navigateToLogInScreen() {
