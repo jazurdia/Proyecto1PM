@@ -27,6 +27,8 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list), AdapterWorkout.Rec
             super.onViewCreated(view, savedInstanceState)
             recycler = view.findViewById(R.id.recycler_workouts)
             initRecycler()
+            requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.VISIBLE
+
         }
 
     private fun initRecycler() {

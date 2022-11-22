@@ -25,6 +25,7 @@ class AlimentacionList : Fragment(R.layout.fragment_alimentacion_list), AdapterF
             super.onViewCreated(view, savedInstanceState)
             recycler = view.findViewById(R.id.recycler_alimentacion)
             initRecycler()
+            requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.VISIBLE
         }
 
     private fun initRecycler() {
@@ -41,9 +42,6 @@ class AlimentacionList : Fragment(R.layout.fragment_alimentacion_list), AdapterF
         // PABLO ESTO TAMBIEN LO CAMBIE.
         val action = AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(food)
         requireView().findNavController().navigate(action)
-
-
-
     }
 
 
