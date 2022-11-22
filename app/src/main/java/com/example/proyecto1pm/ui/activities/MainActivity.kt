@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ViewModel.MainViewModel
 import com.example.proyecto1pm.ViewModel.MainViewModelFactory
