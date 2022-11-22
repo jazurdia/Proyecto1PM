@@ -9,6 +9,8 @@ class MainViewModel : ViewModel() {
 
 // Se usa si el viewmodel recibe parámetros.
 class MainViewModelFactory(emtpyList: Any?) : ViewModelProvider.Factory {
+
+    /*
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
@@ -16,4 +18,7 @@ class MainViewModelFactory(emtpyList: Any?) : ViewModelProvider.Factory {
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
+
+
+     */
 }
