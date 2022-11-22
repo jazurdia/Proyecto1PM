@@ -6,6 +6,8 @@ import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ViewModel.MainViewModel
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private fun setListener() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.action_workoutPlans-> setFragment(WorkoutList())
+                R.id.action_workoutPlans-> Navigation.findNavController(this, R.id.fragmentContainer_mainActivity).navigate(R.id.fr)
                 R.id.action_Alimentacion -> setFragment(AlimentacionList())
                 R.id.action_Progreso -> setFragment(Progreso())
             }
@@ -44,8 +46,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun setFragment(fragment: Fragment){
-        supportFragmentManager.commit {
-            replace(R.id.fragmentContainer_mainActivity, fragment)
-        }
+        //cambiar de fragment usando navigate
+        controlador.navigate(fragment)
     }
 }
