@@ -1,11 +1,8 @@
-package com.example.proyecto1pm.ui.fragments.alimentacion
+package com.example.proyecto1pm.ui.fragments.alimentacion.List
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

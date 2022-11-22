@@ -77,7 +77,7 @@
         tools:layout="@layout/fragment_usuario_second" />
     <fragment
         android:id="@+id/alimentacionDetails"
-        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionDetails"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.Details.AlimentacionDetails"
         android:label="fragment_alimentacion_details"
         tools:layout="@layout/fragment_alimentacion_details" >
         <argument
@@ -86,7 +86,7 @@
     </fragment>
     <fragment
         android:id="@+id/alimentacionList"
-        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.AlimentacionList"
+        android:name="com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionList"
         android:label="fragment_alimentacion_list"
         tools:layout="@layout/fragment_alimentacion_list" >
         <action
