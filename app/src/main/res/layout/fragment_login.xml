@@ -5,11 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.user.Login"
-    android:background="#1B6962"
-    >
-
+    android:background="@drawable/background_gradiente_verde_azulado">
     <!-- Asi se pone un comentario.  -->
-
 
     <ImageView
         android:id="@+id/login_logo"
@@ -53,10 +50,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="@string/introduce_tu_correo_electr_nico"
+        android:background="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_msg1">
         <com.google.android.material.textfield.TextInputEditText
+            android:background="@color/cardview_light_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
@@ -69,10 +68,12 @@
         android:id="@+id/login_password"
         android:layout_marginTop="20dp"
         android:hint="Introduce tu contraseña"
+        android:background="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email">
         <com.google.android.material.textfield.TextInputEditText
+            android:background="@color/cardview_light_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword" />
