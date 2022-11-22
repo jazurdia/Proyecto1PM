@@ -29,7 +29,7 @@ class AlimentacionList : Fragment(R.layout.fragment_alimentacion_list), AdapterF
         list = FoodData.getFoods()
         adapter = AdapterFood(list, this)
 
-        recycler.layoutManager = LinearLayoutManager(requireContext())
+        recycler.layoutManager = L inearLayoutManager(requireContext())
         recycler.setHasFixedSize(true)
         recycler.adapter = adapter
     }
