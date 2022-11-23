@@ -3,7 +3,9 @@ package com.example.proyecto1pm.ui.fragments.alimentacion.List
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
+import com.example.proyecto1pm.Data.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -20,12 +22,21 @@ class AlimentacionListViewModel @Inject constructor (
     val PublicUiState: StateFlow<AlimentacionListUiState> = PrivUiState
     //State
 
-    fun getFoods(){
+    fun getFoods(food: String){
         viewModelScope.launch {
-            val Foods = repository.getFoods(Comida)
 
+            PrivUiState.value = AlimentacionListUiState.Loading
+            delay(2000)
+            val FoodsResult = repository.getFoods(food)
+            when(FoodsResult){
+                is Resource.Error ->{
+                    PrivUiState.value = AlimentacionListUiState.Error(FoodsResult.message ?:"")
+                }
+                is Resource.Success ->{
+                    PrivUiState.value = AlimentacionListUiState.Success(FoodsResult.data ?: listOf())
+                }
+            }
         }
-
         //Update state
     }
 }

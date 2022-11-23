@@ -10,9 +10,9 @@ import androidx.room.Dao
 interface FoodDao {
 
     @Query("SELECT * FROM FoodEnt")
-    fun getFood(): List<FoodEnt>
+    suspend fun getFood(): List<FoodEnt>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(foods: List<FoodEnt>)
+    suspend fun insertAll(foods: List<FoodEnt>)
 
 }

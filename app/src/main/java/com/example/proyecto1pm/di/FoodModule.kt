@@ -6,6 +6,7 @@ import com.example.proyecto1pm.Data.Local.Dao.FoodDao
 import com.example.proyecto1pm.Data.Local.databases.FoodsDb
 import com.example.proyecto1pm.Data.Remote.NutricionixAPI
 import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
+import com.example.proyecto1pm.Data.Repository.Food.FoodRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -64,7 +65,13 @@ object FoodModule {
 
     @Provides
     @Singleton
-    fun provideRepository(): FoodRepository {
-        
+    fun provideRepository(
+        dao: FoodDao,
+        api: NutricionixAPI
+    ): FoodRepository {
+        return FoodRepositoryImpl(
+            localDb =  dao,
+            api = api
+        )
     }
 }

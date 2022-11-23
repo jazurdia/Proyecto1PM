@@ -38,11 +38,9 @@ class AlimentacionList : Fragment(){
         super.onViewCreated(view, savedInstanceState)
         FoodReq = binding.inputLayoutAlimantacionListFragment.toString()
         setObservers()
-        viewModel.getFoods()
+        viewModel.getFoods(FoodReq)
 
     }
-
-
 
     private fun setObservers() {
         lifecycleScope.launchWhenStarted {
@@ -55,6 +53,7 @@ class AlimentacionList : Fragment(){
     private fun handleState(state: AlimentacionListUiState){
         when(state){
             is AlimentacionListUiState.Success -> {
+                println(state.foods)
                 binding.recyclerAlimentacion.visibility = View.VISIBLE
                 binding.progressBarAlimentacionList.visibility = View.GONE
                 binding.toolbarAlimentacionList.visibility = View.VISIBLE
@@ -71,7 +70,7 @@ class AlimentacionList : Fragment(){
                     Toast.LENGTH_LONG).show()
 
             }
-            AlimentacionListUiState.Loading -> {4
+            AlimentacionListUiState.Loading -> {
                 binding.recyclerAlimentacion.visibility = View.GONE
                 binding.progressBarAlimentacionList.visibility = View.VISIBLE
                 binding.toolbarAlimentacionList.visibility = View.GONE
