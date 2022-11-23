@@ -3,7 +3,7 @@ package com.example.proyecto1pm.di
 import android.content.Context
 import androidx.room.Room
 import com.example.proyecto1pm.Data.Local.Dao.FoodDao
-import com.example.proyecto1pm.Data.Local.FoodsDb
+import com.example.proyecto1pm.Data.Local.databases.FoodsDb
 import com.example.proyecto1pm.Data.Remote.NutricionixAPI
 import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
 import dagger.Module

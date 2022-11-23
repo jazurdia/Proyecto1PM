@@ -59,6 +59,9 @@ class Registro : Fragment(R.layout.fragment_registro) {
             } else {
                 Toast.makeText(requireContext(), "Verifica tus datos", Toast.LENGTH_SHORT).show()
             }
+
+
+
         }
 
     }
