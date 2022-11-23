@@ -2,7 +2,7 @@ package com.example.proyecto1pm.ui.fragments.alimentacion.List
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.proyecto1pm.Data.Repository.FoodRepository
+import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -22,7 +22,7 @@ class AlimentacionListViewModel @Inject constructor (
 
     fun getFoods(){
         viewModelScope.launch {
-            val Foods = repository.getFoods()
+            val Foods = repository.getFoods(Comida)
 
         }
 

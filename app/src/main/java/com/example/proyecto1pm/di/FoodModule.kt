@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.example.proyecto1pm.Data.Local.Dao.FoodDao
 import com.example.proyecto1pm.Data.Local.FoodsDb
 import com.example.proyecto1pm.Data.Remote.NutricionixAPI
-import com.example.proyecto1pm.Data.Repository.FoodRepository
+import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

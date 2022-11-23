@@ -22,6 +22,8 @@ import dagger.hilt.android.AndroidEntryPoint
 class AlimentacionList : Fragment(){
     private lateinit var binding : FragmentAlimentacionListBinding
     private val viewModel : AlimentacionListViewModel by viewModels()
+    private lateinit var FoodReq: String
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,10 +36,13 @@ class AlimentacionList : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        FoodReq = binding.inputLayoutAlimantacionListFragment.toString()
         setObservers()
         viewModel.getFoods()
+
     }
+
+
 
     private fun setObservers() {
         lifecycleScope.launchWhenStarted {
