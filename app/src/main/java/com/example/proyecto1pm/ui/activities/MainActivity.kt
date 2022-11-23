@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionList
 import com.example.proyecto1pm.ui.fragments.user.Progreso
+import com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private fun setListener() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.action_workoutPlans-> Navigation.findNavController(this, R.id.fragmentContainer_mainActivity).navigate(R.id.fr)
+                R.id.action_workoutPlans-> setFragment(WorkoutList())
                 R.id.action_Alimentacion -> setFragment(AlimentacionList())
                 R.id.action_Progreso -> setFragment(Progreso())
             }
@@ -39,7 +40,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun setFragment(fragment: Fragment){
-        //cambiar de fragment usando navigate
-        controlador.navigate(fragment)
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainer_mainActivity, fragment)
+            commit()
+        }
     }
 }
