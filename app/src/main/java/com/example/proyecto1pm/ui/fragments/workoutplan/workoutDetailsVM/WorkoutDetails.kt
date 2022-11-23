@@ -19,13 +19,6 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class WorkoutDetails : Fragment(R.layout.fragment_workout_details) {
 
-    private lateinit var nombre : TextView
-    private lateinit var descripcion : TextView
-    private lateinit var reps : TextView
-    private lateinit var imagen : ImageView
-    private val args: WorkoutDetailsArgs by navArgs()
-
-
     private lateinit var binding : FragmentWorkoutDetailsBinding
     private val viewmodel : WorkoutDetailsViewModel by viewModels()
 
@@ -59,17 +52,32 @@ class WorkoutDetails : Fragment(R.layout.fragment_workout_details) {
                 binding.progressBarWorkoutDetails.visibility = View.GONE
                 binding.constraintLayoutWorkoutDetails.visibility = View.VISIBLE
                 binding.toolbarWorkoutDetails.visibility = View.VISIBLE
-                binding.toolbarWorkoutDetails.title = state.workouts[0].nombre
-                binding.nombreWorkoutDetails.text = state.workouts[0].nombre
-                binding.descripcionWorkoutDetails.text = state.workouts[0].descripcion
-                binding.repsWorkoutDetails.text = state.workouts[0].reps
-                binding.imagenWorkoutDetails.load(state.workouts[0].imagen){
-                    crossfade(true)
-                    placeholder(R.drawable.ic_launcher_background)
-                    error(R.drawable.ic_launcher_background)
-                    memoryCachePolicy(CachePolicy.ENABLED)
-                }
+                binding.constraintLayoutDetails2.visibility = View.VISIBLE
+
             }
+
+            is WorkoutDetailsUiState.Loading -> {
+                binding.progressBarWorkoutDetails.visibility = View.VISIBLE
+                binding.constraintLayoutWorkoutDetails.visibility = View.GONE
+                binding.toolbarWorkoutDetails.visibility = View.GONE
+                binding.constraintLayoutDetails2.visibility = View.GONE
+            }
+
+            is WorkoutDetailsUiState.Error -> {
+                binding.progressBarWorkoutDetails.visibility = View.GONE
+                binding.constraintLayoutWorkoutDetails.visibility = View.GONE
+                binding.toolbarWorkoutDetails.visibility = View.GONE
+                binding.constraintLayoutDetails2.visibility = View.GONE
+            }
+
+            is WorkoutDetailsUiState.Default -> {
+                binding.progressBarWorkoutDetails.visibility = View.GONE
+                binding.constraintLayoutWorkoutDetails.visibility = View.GONE
+                binding.toolbarWorkoutDetails.visibility = View.GONE
+                binding.constraintLayoutDetails2.visibility = View.GONE
+            }
+
+
         }
 
     }

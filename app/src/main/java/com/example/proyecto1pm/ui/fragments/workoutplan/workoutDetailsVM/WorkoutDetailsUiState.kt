@@ -4,7 +4,7 @@ import com.example.proyecto1pm.Data.Remote.Dto.WorkoutDto
 
 interface WorkoutDetailsUiState {
 
-    data class Sucess(val workouts : List<WorkoutDto>) : WorkoutDetailsUiState
+    data class Success(val workouts : List<WorkoutDto>) : WorkoutDetailsUiState
     object Loading : WorkoutDetailsUiState
     object Default : WorkoutDetailsUiState
     data class Error(val message: String) : WorkoutDetailsUiState

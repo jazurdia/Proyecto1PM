@@ -34,7 +34,7 @@ class WorkoutDetailsViewModel @Inject constructor(
                     PrivUiState.value = WorkoutDetailsUiState.Error(WorkoutsResult.message ?:"")
                 }
                 is Resource.Success ->{
-                    PrivUiState.value = WorkoutDetailsUiState.Sucess((WorkoutsResult.data ?: listOf()) as List<WorkoutDto>)
+                    PrivUiState.value = WorkoutDetailsUiState.Success((WorkoutsResult.data ?: listOf()) as List<WorkoutDto>)
                 }
             }
 
