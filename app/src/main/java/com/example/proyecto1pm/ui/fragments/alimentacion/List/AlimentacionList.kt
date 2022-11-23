@@ -50,6 +50,8 @@ class AlimentacionList : Fragment(){
         }
     }
 
+
+
     private fun handleState(state: AlimentacionListUiState){
         when(state){
             is AlimentacionListUiState.Success -> {
@@ -58,6 +60,8 @@ class AlimentacionList : Fragment(){
                 binding.progressBarAlimentacionList.visibility = View.GONE
                 binding.toolbarAlimentacionList.visibility = View.VISIBLE
                 binding.constraintLayoutCalories.visibility = View.VISIBLE
+
+
             }
             is AlimentacionListUiState.Error -> {
                 //Show error

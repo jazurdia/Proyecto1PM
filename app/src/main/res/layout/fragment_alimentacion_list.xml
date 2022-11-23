@@ -14,6 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
 
         />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayout_AlimantacionListFragment"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -21,22 +22,25 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Busca tu comida aquí"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_alimentacionList"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout_Calories"
-        >
+        app:layout_constraintEnd_toStartOf="@id/ButtonBuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_alimentacionList">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ButtonBuscar"
+        app:layout_constraintTop_toTopOf="@id/inputLayout_AlimantacionListFragment"
+        app:layout_constraintBottom_toBottomOf="@id/inputLayout_AlimantacionListFragment"
+        app:layout_constraintStart_toEndOf="@+id/inputLayout_AlimantacionListFragment"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_Calories"
+
 
         />
 
