@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.ui.fragments.workoutplan.workoutDetailsVM
+package com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCarpet
 
 import com.example.proyecto1pm.Data.Remote.Dto.WorkoutDto
 

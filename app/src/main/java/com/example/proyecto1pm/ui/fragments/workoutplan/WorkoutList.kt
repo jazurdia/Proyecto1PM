@@ -17,7 +17,7 @@ import com.example.proyecto1pm.ui.adapters.AdapterWorkout
 import androidx.navigation.findNavController
 
 
-class WorkoutList : Fragment(R.layout.fragment_workout_list), AdapterWorkout.RecyclerViewWorkoutClickHandler {
+class WorkoutList : Fragment(R.layout.), AdapterWorkout.RecyclerViewWorkoutClickHandler {
 
     private lateinit var recycler: RecyclerView
     private lateinit var list: MutableList<Excersise>

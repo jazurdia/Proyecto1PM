@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/workoutDetails"
-        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.workoutDetailsVM.WorkoutList"
+        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCarpet.WorkoutList"
         android:label="fragment_workout_details"
         tools:layout="@layout/fragment_workout_details" >
         <argument

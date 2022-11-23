@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.ui.fragments.workoutplan.workoutDetailsVM
+package com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCarpet
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
