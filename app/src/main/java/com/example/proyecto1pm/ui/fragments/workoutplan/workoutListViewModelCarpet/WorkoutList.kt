@@ -13,7 +13,7 @@ import com.example.proyecto1pm.databinding.FragmentWorkoutListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class WorkoutList : Fragment(R.layout.fragment_workout_list) {
+class WorkoutList : Fragment(R.layout.fragment_workout_list)  {
 
     private lateinit var binding : FragmentWorkoutListBinding
     private val viewmodel : WorkoutListViewModel by viewModels()
@@ -69,6 +69,8 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list) {
         }
 
     }
+
+
 
 
 }
