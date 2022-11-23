@@ -22,6 +22,7 @@ class AlimentacionListViewModel @Inject constructor (
 
     fun getFoods(){
         viewModelScope.launch {
+            val Foods = repository.getFoods()
 
         }
 

@@ -11,7 +11,9 @@ import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionList
 import com.example.proyecto1pm.ui.fragments.user.Progreso
 import com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var bottomNav : BottomNavigationView
@@ -19,8 +21,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer_mainActivity) as NavHostFragment
-        controlador = navHostFragment.navController
         setContentView(R.layout.activity_main)
         bottomNav = findViewById(R.id.bottom_navigation)
         setListener()
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private fun setListener() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.action_workoutPlans-> setFragment(WorkoutList())
+                R.id.action_workoutPlans-> controlador.navigate(R.id.action_workoutPlans)
                 R.id.action_Alimentacion -> setFragment(AlimentacionList())
                 R.id.action_Progreso -> setFragment(Progreso())
             }

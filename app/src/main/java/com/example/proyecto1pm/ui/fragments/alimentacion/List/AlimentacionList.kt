@@ -57,6 +57,10 @@ class AlimentacionList : Fragment(){
             }
             is AlimentacionListUiState.Error -> {
                 //Show error
+                binding.recyclerAlimentacion.visibility = View.GONE
+                binding.progressBarAlimentacionList.visibility = View.GONE
+                binding.toolbarAlimentacionList.visibility = View.GONE
+                binding.constraintLayoutCalories.visibility = View.GONE
                 Toast.makeText(requireContext(),
                     state.message,
                     Toast.LENGTH_LONG).show()

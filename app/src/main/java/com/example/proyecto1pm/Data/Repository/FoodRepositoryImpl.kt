@@ -11,11 +11,11 @@ class FoodRepositoryImpl(
     private val localDb: FoodDao,
     private val api: NutricionixAPI
 ) : FoodRepository {
-    override suspend fun getFoods(): Resource<List<FoodEnt>> {
+    override suspend fun getFoods(FoodReq :String): Resource<List<FoodEnt>> {
         val localFood = localDb.getFood()
         try{
             if (localFood.isEmpty()) {
-                val remoteFood = api.getFood().foods
+                val remoteFood = api.getFood(FoodReq).foods
                 val mappedFoods = remoteFood.map {FoodDto -> FoodDto.toFoodEnt()}
                 localDb.insertAll(mappedFoods)
                 return Resource.Success(mappedFoods)

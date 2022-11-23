@@ -12,17 +12,35 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/constraintLayout_Calories"
+
         />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_AlimantacionListFragment"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Busca tu comida aquí"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_alimentacionList"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout_Calories"
+        >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
     
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="165dp"
         android:id="@+id/constraintLayout_Calories"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_alimentacionList"
+        app:layout_constraintTop_toBottomOf="@id/inputLayout_AlimantacionListFragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/toolbar_alimentacionList"
+        app:layout_constraintBottom_toTopOf="@id/recycler_alimentacion"
         android:background="@drawable/alimentacion_widget"
         android:layout_margin="20dp"
 
