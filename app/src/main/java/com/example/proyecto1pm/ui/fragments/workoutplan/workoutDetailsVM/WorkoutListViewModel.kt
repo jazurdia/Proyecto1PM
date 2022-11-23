@@ -14,27 +14,27 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class WorkoutDetailsViewModel @Inject constructor(
+class WorkoutListViewModel @Inject constructor(
     private val repository: WorkoutRepository
 ) : ViewModel() {
-    private val PrivUiState : MutableStateFlow<WorkoutDetailsUiState> =
-        MutableStateFlow(WorkoutDetailsUiState.Default)
+    private val PrivUiState : MutableStateFlow<WorkoutListUiState> =
+        MutableStateFlow(WorkoutListUiState.Default)
 
-    val PublicUiState: StateFlow<WorkoutDetailsUiState> = PrivUiState
+    val PublicUiState: StateFlow<WorkoutListUiState> = PrivUiState
     //State
 
     fun getWorkouts(){
         viewModelScope.launch {
 
-            PrivUiState.value = WorkoutDetailsUiState.Loading
+            PrivUiState.value = WorkoutListUiState.Loading
             delay(2000)
             val WorkoutsResult = repository.getWorkouts()
             when(WorkoutsResult){
                 is Resource.Error ->{
-                    PrivUiState.value = WorkoutDetailsUiState.Error(WorkoutsResult.message ?:"")
+                    PrivUiState.value = WorkoutListUiState.Error(WorkoutsResult.message ?:"")
                 }
                 is Resource.Success ->{
-                    PrivUiState.value = WorkoutDetailsUiState.Success((WorkoutsResult.data ?: listOf()) as List<WorkoutDto>)
+                    PrivUiState.value = WorkoutListUiState.Success((WorkoutsResult.data ?: listOf()) as List<WorkoutDto>)
                 }
             }
 
