@@ -22,7 +22,7 @@ class AlimentacionListViewModel @Inject constructor (
 
     fun getFoods(){
         viewModelScope.launch {
-          // val foods =  repository.getFoods()
+
         }
 
         //Update state

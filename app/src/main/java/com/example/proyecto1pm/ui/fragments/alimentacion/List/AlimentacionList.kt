@@ -42,7 +42,7 @@ class AlimentacionList : Fragment(){
     private fun setObservers() {
         lifecycleScope.launchWhenStarted {
             viewModel.PublicUiState.collect { state ->
-                handleState()
+                handleState(state)
             }
         }
     }

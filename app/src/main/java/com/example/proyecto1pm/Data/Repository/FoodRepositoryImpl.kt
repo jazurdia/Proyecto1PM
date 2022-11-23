@@ -8,8 +8,8 @@ import com.example.proyecto1pm.Data.Remote.NutricionixAPI
 import com.example.proyecto1pm.Data.Resource
 
 class FoodRepositoryImpl(
-    val localDb: FoodDao,
-    val api: NutricionixAPI
+    private val localDb: FoodDao,
+    private val api: NutricionixAPI
 ) : FoodRepository {
     override suspend fun getFoods(): Resource<List<FoodEnt>> {
         val localFood = localDb.getFood()
