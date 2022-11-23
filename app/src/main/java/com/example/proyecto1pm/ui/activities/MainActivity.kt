@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private lateinit var bottomNav : BottomNavigationView
     private lateinit var controlador: NavController
 
-    //private var viewModel : MainViewModel by viewModels { MainViewModelFactory(emtpyList()) }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer_mainActivity) as NavHostFragment
