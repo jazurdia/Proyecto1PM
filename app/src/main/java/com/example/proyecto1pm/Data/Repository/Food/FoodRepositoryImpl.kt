@@ -10,7 +10,7 @@ class FoodRepositoryImpl(
     private val localDb: FoodDao,
     private val api: NutricionixAPI
 ) : FoodRepository {
-    override suspend fun getFoods(FoodReq :String): Resource<List<FoodEnt>> {
+    override suspend fun getFoods(FoodReq :String): Resource<List<FoodEnt>?> {
         val localFood = localDb.getFood()
         try{
             if (localFood.isEmpty()) {
@@ -24,5 +24,19 @@ class FoodRepositoryImpl(
         }catch(ex: Exception){
             return Resource.Error(ex.message?:"")
         }
+    }
+
+    override suspend fun getUniqueFood(Food: FoodEnt): Resource<FoodEnt?> {
+        return try{
+            val localUnique = localDb.getUniqueFood(Food.food_name)
+            if(localUnique!= null){
+                Resource.Success(localUnique)
+            }else{
+                Resource.Error("No se encontró base de datos local")
+            }
+        }catch(ex: Exception){
+            Resource.Error(ex.message?:"Error inesperado")
+        }
+
     }
 }

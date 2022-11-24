@@ -65,8 +65,6 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
         when(state){
             is AlimentacionListUiState.Success -> {
                 listOfFoods = state.foods!!.toMutableList()
-
-                println(state.foods)
                 binding.recyclerAlimentacion.visibility = View.VISIBLE
                 binding.progressBarAlimentacionList.visibility = View.GONE
                 binding.toolbarAlimentacionList.visibility = View.VISIBLE

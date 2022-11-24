@@ -15,4 +15,7 @@ interface FoodDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(foods: List<FoodEnt>)
 
+    @Query("SELECT * FROM FoodEnt WHERE food_name =:name")
+    suspend fun getUniqueFood(name: String) : FoodEnt
+
 }

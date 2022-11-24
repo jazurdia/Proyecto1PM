@@ -5,5 +5,8 @@ import com.example.proyecto1pm.Data.Resource
 
 interface FoodRepository {
 
-    suspend fun getFoods(FoodsReq:String): Resource<List<FoodEnt>>
+    suspend fun getFoods(FoodsReq:String): Resource<List<FoodEnt>?>
+
+    suspend fun getUniqueFood(Food: FoodEnt): Resource<FoodEnt?>
+
 }
