@@ -14,14 +14,14 @@
 
     <ImageView
         android:id="@+id/login_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="60dp"
+        android:contentDescription="@string/logo_elevate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars"
-        android:contentDescription="@string/logo_elevate" />
+        app:srcCompat="@drawable/elevate__4_" />
 
     <TextView
         android:id="@+id/login_bienvenido"
