@@ -33,7 +33,7 @@ class WorkoutDetails: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getSingleWorkout(args.ejercicio)
+        viewModel.getSingleWorkout(args.mamao)
         setObservers()
     }
 

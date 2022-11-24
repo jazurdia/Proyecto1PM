@@ -31,7 +31,7 @@ class AlimentacionDetails : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getUniqueFood(args.food)
+        viewModel.getUniqueFood(args.comidita)
         setObservers()
     }
 

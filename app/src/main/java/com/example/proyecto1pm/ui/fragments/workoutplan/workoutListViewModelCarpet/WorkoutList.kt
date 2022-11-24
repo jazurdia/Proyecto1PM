@@ -52,7 +52,6 @@ class WorkoutList : Fragment(), AdapterWorkOut.PlaceListener  {
             is WorkoutListUiState.Success -> {
                 listOfWorkouts = state.workouts.toMutableStateList()
                 binding.progressBarWorkoutList.visibility = View.GONE
-                binding.toolbarWorkoutList.visibility = View.VISIBLE
                 binding.recyclerWorkouts.visibility = View.VISIBLE
                 binding.recyclerWorkouts.setHasFixedSize(true)
                 binding.recyclerWorkouts.adapter = AdapterWorkOut(listOfWorkouts,this)
@@ -60,18 +59,15 @@ class WorkoutList : Fragment(), AdapterWorkOut.PlaceListener  {
 
             } is WorkoutListUiState.Loading -> {
                 binding.progressBarWorkoutList.visibility = View.VISIBLE
-                binding.toolbarWorkoutList.visibility = View.GONE
                 binding.recyclerWorkouts.visibility = View.GONE
             } is WorkoutListUiState.Error -> {
                 binding.progressBarWorkoutList.visibility = View.GONE
-                binding.toolbarWorkoutList.visibility = View.GONE
                 binding.recyclerWorkouts.visibility = View.GONE
 
                 Toast.makeText(context, "", Toast.LENGTH_SHORT).show()
 
             } is WorkoutListUiState.Default -> {
                 binding.progressBarWorkoutList.visibility = View.GONE
-                binding.toolbarWorkoutList.visibility = View.GONE
                 binding.recyclerWorkouts.visibility = View.GONE
             }
 

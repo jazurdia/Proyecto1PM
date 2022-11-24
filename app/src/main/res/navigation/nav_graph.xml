@@ -11,23 +11,11 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_login_to_registro"
-            app:destination="@id/registro" />
-        <action
             android:id="@+id/action_login_to_workoutList"
             app:destination="@id/workoutList" />
     </fragment>
 
 
-    <fragment
-        android:id="@+id/registro"
-        android:name="com.example.proyecto1pm.ui.fragments.user.Registro"
-        android:label="fragment_registro"
-        tools:layout="@layout/fragment_registro" >
-        <action
-            android:id="@+id/action_registro_to_workoutList"
-            app:destination="@id/workoutList" />
-    </fragment>
 
 
     <fragment
@@ -36,7 +24,7 @@
         android:label="fragment_workout_details"
         tools:layout="@layout/fragment_workout_details" >
         <argument
-            android:name="Ejercicio"
+            android:name="mamao"
             app:argType="com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt" />
     </fragment>
     <fragment
@@ -76,7 +64,7 @@
         android:label="fragment_alimentacion_details"
         tools:layout="@layout/fragment_alimentacion_details" >
         <argument
-            android:name="Food"
+            android:name="comidita"
             app:argType="com.example.proyecto1pm.Data.Local.Entity.FoodEnt" />
     </fragment>
     <fragment
@@ -85,7 +73,7 @@
         android:label="fragment_alimentacion_list"
         tools:layout="@layout/fragment_alimentacion_list" >
         <action
-            android:id="@+id/action_alimentacionList3_to_alimentacionDetails"
+            android:id="@+id/action_alimentacionList_to_alimentacionDetails"
             app:destination="@id/alimentacionDetails" />
     </fragment>
 </navigation>
