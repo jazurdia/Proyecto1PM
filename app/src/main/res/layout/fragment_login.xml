@@ -11,7 +11,6 @@
 
     <!-- Asi se pone un comentario.  -->
 
-
     <ImageView
         android:id="@+id/login_logo"
         android:layout_width="200dp"

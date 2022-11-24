@@ -43,12 +43,6 @@ class AdapterWorkOut (
                     placeholder(R.drawable.ic_baseline_downloading_24)
                 }
             }
-
-            private fun setListeners() {
-                image.setOnClickListener {
-                    listener.onPlaceClicked(place, this.adapterPosition)
-                }
-            }
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
