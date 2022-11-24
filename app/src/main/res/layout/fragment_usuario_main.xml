@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:text="@string/objetivos_del_usuario"
         android:textColor="@color/white"
-        android:textSize="@dimen/sizeMediano"
+        android:textSize="@dimen/sizePeque"
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoObjetivoUsuario"
         app:layout_constraintEnd_toEndOf="@+id/usuariomain_username"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoObjetivoUsuario" />
@@ -119,7 +119,7 @@
         android:text="@string/actuilizar_datos"
         android:textColor="@color/white"
 
-        android:textSize="@dimen/sizeMediano"
+        android:textSize="@dimen/sizePeque"
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoActualizarDatos"
 
         app:layout_constraintStart_toStartOf="@+id/usuariomain_objetivoUsuario"
@@ -141,7 +141,7 @@
         android:layout_height="wrap_content"
         android:text="@string/otras_configuraciones"
         android:textColor="@color/white"
-        android:textSize="@dimen/sizeMediano"
+        android:textSize="@dimen/sizePeque"
 
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoConfiguraciones"
         app:layout_constraintStart_toStartOf="@+id/usuariomain_objetivoUsuario"
