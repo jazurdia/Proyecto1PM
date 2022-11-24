@@ -50,6 +50,7 @@ class Login : Fragment(R.layout.fragment_login) {
             val email = binding.loginEmail.editText?.text.toString()
             val password = binding.loginPassword.editText?.text.toString()
             viewModel.signIn(email, password)
+
         }
 
         // sign up
@@ -72,18 +73,14 @@ class Login : Fragment(R.layout.fragment_login) {
     private fun handleState(state : LoginRegisterUiState){
         when(state){
             is LoginRegisterUiState.Success -> {
-                // ir a la siguiente pantalla.
-                requireView().findNavController().navigate(R.id.action_login_to_workoutList)
-                binding.progressBarLogin.visibility = View.GONE
+                //binding.progressBarLogin.visibility = View.GONE
 
             } is LoginRegisterUiState.Loading -> {
-                // xddddd
-                binding.progressBarLogin.visibility = View.VISIBLE
+                //binding.progressBarLogin.visibility = View.VISIBLE
 
             } is LoginRegisterUiState.Error -> {
                 Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
-                // espero que sea un mensaje de error jajaja
-                binding.progressBarLogin.visibility = View.GONE
+                //binding.progressBarLogin.visibility = View.GONE
 
             }
         }
