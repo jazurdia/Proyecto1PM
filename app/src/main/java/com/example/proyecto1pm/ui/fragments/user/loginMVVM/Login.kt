@@ -1,11 +1,14 @@
-package com.example.proyecto1pm.ui.fragments.user
+package com.example.proyecto1pm.ui.fragments.user.loginMVVM
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.example.proyecto1pm.Data.Repository.firebase.AuthRepository
 import com.example.proyecto1pm.R
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -17,6 +20,11 @@ class Login : Fragment(R.layout.fragment_login) {
     private lateinit var inputPassword: TextInputLayout
     private lateinit var buttonLogin: Button
     private lateinit var signupbtn: Button
+    private var viewModel: LoginRegisterViewModel by viewModels()
+    private lateinit var authRepository: AuthRepository
+    private lateinit var myprogressbar: ProgressBar
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
