@@ -9,6 +9,8 @@
     <dimen name="sizePeque">16sp</dimen>
     <dimen name="sizeMuyPeque">12sp</dimen>
     <dimen name="marginMuyPeque">12dp</dimen>
-
+    <dimen name="sizeMaso">20sp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="marginMuyMuyGrande">60dp</dimen>
 
 </resources>
