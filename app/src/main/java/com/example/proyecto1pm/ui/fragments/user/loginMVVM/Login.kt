@@ -74,13 +74,16 @@ class Login : Fragment(R.layout.fragment_login) {
             is LoginRegisterUiState.Success -> {
                 // ir a la siguiente pantalla.
                 requireView().findNavController().navigate(R.id.action_login_to_workoutList)
+                binding.progressBarLogin.visibility = View.GONE
 
             } is LoginRegisterUiState.Loading -> {
                 // xddddd
+                binding.progressBarLogin.visibility = View.VISIBLE
 
             } is LoginRegisterUiState.Error -> {
                 Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
                 // espero que sea un mensaje de error jajaja
+                binding.progressBarLogin.visibility = View.GONE
 
             }
         }
