@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionList
 import com.example.proyecto1pm.ui.fragments.user.Progreso
-import com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
