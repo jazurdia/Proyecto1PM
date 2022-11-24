@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.user.loginMVVM.Login"
-    android:background="#1B6962"
+    android:background="@drawable/background_gradiente_verde_azulado"
     android:id="@+id/login_fragment">
 
 
@@ -27,9 +27,9 @@
         android:id="@+id/login_bienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="@dimen/marginEstandar"
         android:text="@string/bienvenido_msg"
-        android:textSize="40sp"
+        android:textSize="@dimen/sizeGrande"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/white"
 
@@ -41,10 +41,11 @@
         android:id="@+id/login_msg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/marginPeque"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/white"
-        android:text="@string/login_msg2"
+        android:text="@string/inicia_sesi_n_o_reg_strate"
+        android:textSize="@dimen/sizePeque"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_bienvenido" />
@@ -53,15 +54,15 @@
         android:id="@+id/login_email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/introduce_tu_correo_electr_nico"
+        android:layout_marginTop="@dimen/marginEstandar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_msg1">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textEmailAddress"
+            android:hint="@string/introduce_tu_correo_electr_nico"
+            android:textSize="@dimen/sizePeque"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,15 +70,17 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/login_password"
-        android:layout_marginTop="20dp"
-        android:hint="@string/introduce_tu_contrase_a"
+        android:layout_marginTop="@dimen/marginPeque"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email">
         <com.google.android.material.textfield.TextInputEditText
+            android:hint="@string/introduce_tu_contrase_a"
+            android:textSize="@dimen/sizePeque"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword" />
+
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -85,7 +88,7 @@
         android:id="@+id/login_layout_botones_LinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/marginEstandar"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -94,10 +97,14 @@
 
         <Button
             android:id="@+id/login_continuarbtn"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/largoboton1"
             android:layout_height="wrap_content"
             android:text="@string/sign_in"
-            android:textSize="10sp"
+            android:textSize="@dimen/sizePeque"
+            android:backgroundTint="#26A69A"
+            android:textColor="@drawable/pressed"
+
+
             tools:ignore="SmallSp" />
 
         <TextView
@@ -108,10 +115,12 @@
 
         <Button
             android:id="@+id/login_signupbtn"
-            android:layout_width="100dp"
+            android:layout_width="@dimen/largoboton1"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
-            android:textSize="10sp"
+            android:textSize="@dimen/sizePeque"
+            android:backgroundTint="@color/colorBotones"
+            android:textColor="@drawable/pressed"
 
             tools:ignore="SmallSp" />
 

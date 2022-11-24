@@ -5,29 +5,23 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.alimentacion.List.AlimentacionList">
-    
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar_alimentacionList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
-        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputLayout_AlimantacionListFragment"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="@string/busca_tu_comida_aqu"
+        android:layout_margin="@dimen/marginPeque"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout_Calories"
         app:layout_constraintEnd_toStartOf="@id/ButtonBuscar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_alimentacionList">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:hint="@string/busca_tu_comida_aqu"
+            android:textSize="@dimen/sizePeque"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ButtonBuscar"
+        android:layout_margin="@dimen/marginPeque"
         app:layout_constraintTop_toTopOf="@id/inputLayout_AlimantacionListFragment"
         app:layout_constraintBottom_toBottomOf="@id/inputLayout_AlimantacionListFragment"
         app:layout_constraintStart_toEndOf="@+id/inputLayout_AlimantacionListFragment"
@@ -47,97 +42,102 @@
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="165dp"
         android:id="@+id/constraintLayout_Calories"
-        app:layout_constraintTop_toBottomOf="@id/inputLayout_AlimantacionListFragment"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/recycler_alimentacion"
-        android:background="@drawable/alimentacion_widget"
-        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginEstandar"
+        android:layout_marginEnd="@dimen/marginEstandar"
+        android:layout_marginBottom="@dimen/marginPeque"
+        android:padding="10dp"
 
-        >
+        android:background="@drawable/alimentacion_widget"
+        app:layout_constraintBottom_toTopOf="@id/recycler_alimentacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/inputLayout_AlimantacionListFragment">
 
         <TextView
             android:id="@+id/text_calories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_margin="@dimen/marginPeque"
             android:fontFamily="sans-serif"
             android:text="@string/calories2"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"
+            android:textSize="@dimen/sizeGrande"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_0"
             android:id="@+id/text_calories_remaining_value"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sizeMediano"
             app:layout_constraintEnd_toStartOf="@+id/text_calories_remaining"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_calories_remaining" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/remaining"
             android:id="@+id/text_calories_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/remaining"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sizeMediano"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/text_calories_remaining_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            />
+            app:layout_constraintTop_toBottomOf="@id/text_calories" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/_0"
             android:id="@+id/text_calories_consumed_value"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories_remaining"
-            app:layout_constraintEnd_toStartOf="@+id/text_calories_consumed"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            />
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/consumed"
-            android:id="@+id/text_calories_consumed"
-            app:layout_constraintStart_toEndOf="@id/text_calories_consumed_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories_remaining"
-            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            android:text="@string/_0"
             android:textColor="@color/black"
-            />
+            android:textSize="@dimen/sizeMediano"
+            app:layout_constraintEnd_toStartOf="@+id/text_calories_consumed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_calories_remaining" />
+
         <TextView
+            android:id="@+id/text_calories_consumed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/consumed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sizeMediano"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_calories_consumed_value"
+            app:layout_constraintTop_toBottomOf="@id/text_calories_remaining" />
+
+        <TextView
+            android:id="@+id/text_calories_burned_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_0"
-            android:id="@+id/text_calories_burned_value"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories_consumed"
-            app:layout_constraintEnd_toStartOf="@+id/text_calories_burned"
-            android:textSize="20sp"
             android:textColor="@color/black"
-            />
+            android:textSize="@dimen/sizeMediano"
+            app:layout_constraintStart_toStartOf="@+id/text_calories_consumed_value"
+            app:layout_constraintTop_toBottomOf="@id/text_calories_consumed" />
+
         <TextView
+            android:id="@+id/text_calories_burned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="@string/burned"
-            android:id="@+id/text_calories_burned"
-            app:layout_constraintStart_toEndOf="@id/text_calories_burned_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_calories_consumed"
-            android:textSize="20sp"
             android:textColor="@color/black"
-            />
+            android:textSize="@dimen/sizeMediano"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_calories_burned_value"
+            app:layout_constraintTop_toBottomOf="@id/text_calories_consumed" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ProgressBar
@@ -151,6 +151,7 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/recycler_alimentacion"
@@ -158,6 +159,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/recycler_item_alimentacion"
+        android:layout_marginStart="@dimen/marginPeque"
+        android:layout_marginEnd="@dimen/marginPeque"
+
+
         />
 
 

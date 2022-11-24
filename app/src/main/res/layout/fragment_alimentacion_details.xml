@@ -7,15 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.alimentacion.Details.AlimentacionDetails">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar_FoodDetails"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/constraintLayout_details"
-        />
+
     <ProgressBar
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -30,64 +22,64 @@
         android:id="@+id/constraintLayout_details"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/marginPeque"
         android:background="@drawable/background_workout_details"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_FoodDetails"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="20dp"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
             android:id="@+id/text_FoodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginPeque"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/food_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sizeGrande"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="20dp"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
 
             />
+
         <TextView
             android:id="@+id/text_FoodCalories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/calories"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_FoodName"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:layout_marginStart="@dimen/marginPeque"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             android:fontFamily="sans-serif-medium"
-            />
+            android:text="@string/calories"
+            android:textSize="@dimen/sizePeque"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_FoodName" />
+
         <ImageView
+            android:id="@+id/image_food"
             android:layout_width="200dp"
             android:layout_height="100dp"
-            android:id="@+id/image_food"
-            app:layout_constraintTop_toBottomOf="@id/text_FoodCalories"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/marginPeque"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            tools:srcCompat="@tools:sample/avatars"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_FoodCalories"
+            tools:srcCompat="@tools:sample/avatars" />
+
         <TextView
+            android:id="@+id/text_Foodrecipe_steps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginPeque"
+            android:layout_marginTop="@dimen/marginPeque"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/steps_for_elaboration"
-            android:id="@+id/text_Foodrecipe_steps"
-            app:layout_constraintTop_toBottomOf="@id/image_food"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_food"
 
             />
 
@@ -95,23 +87,22 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:layout_marginTop="@dimen/marginPeque"
             android:background="?android:attr/listDivider"
-            app:layout_constraintTop_toBottomOf="@id/text_Foodrecipe_steps"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            />
+            app:layout_constraintTop_toBottomOf="@id/text_Foodrecipe_steps" />
+
         <TextView
+            android:id="@+id/text_FoodDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/description"
-            android:id="@+id/text_FoodDescription"
-            app:layout_constraintTop_toBottomOf="@id/divider"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:layout_marginStart="@dimen/marginPeque"
+            android:layout_marginTop="@dimen/marginPeque"
             android:fontFamily="sans-serif"
-            />
+            android:text="@string/description"
+            android:textSize="@dimen/sizePeque"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,12 +13,12 @@
         android:id="@+id/otrasconfiguraciones_layoutInner"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="30dp"
+        android:layout_margin="@dimen/marginEstandar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/rounded_corners"
+        android:background="@drawable/square_with_rounded_corners"
         android:elevation="8dp">
 
 
@@ -26,7 +26,7 @@
             android:id="@+id/otrasconfiguraciones_spinner_enfoquedelusuario"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textview_enfoquedelusuario" />
@@ -35,9 +35,8 @@
             android:id="@+id/otrasconfiguraciones_spinner_masausuario"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintEnd_toEndOf="@+id/otrasconfiguraciones_spinner_enfoquedelusuario"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/otrasconfiguraciones_spinner_enfoquedelusuario"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textview_masausuario" />
 
@@ -45,10 +44,10 @@
             android:id="@+id/otrasconfiguraciones_textview_enfoquedelusuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/marginEstandar"
             android:text="@string/enfoque_del_usuario"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
 
             android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +58,11 @@
             android:id="@+id/otrasconfiguraciones_textview_masausuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/marginEstandar"
             android:fontFamily="sans-serif-medium"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             android:text="@string/masa_del_usuario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,12 +72,12 @@
             android:id="@+id/otrasconfiguraciones_textView_porcentajedegrasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Porcentaje de grasa"
+            android:layout_marginTop="@dimen/marginEstandar"
+            android:text="@string/porcentaje_de_grasa"
             android:fontFamily="sans-serif-medium"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_spinner_masausuario" />
@@ -87,7 +86,7 @@
             android:id="@+id/otrasconfiguraciones_spinner_porcentajedegrasa"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textView_porcentajedegrasa" />
@@ -97,11 +96,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/otrasconfiguraciones_textview_alturaUsuario"
             android:layout_marginTop="32dp"
-            android:text="Altura del usuario"
+            android:text="@string/altura_del_usuario"
             android:fontFamily="sans-serif-medium"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMediano"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_spinner_porcentajedegrasa" />
@@ -112,13 +111,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Edad del usuario"
+            android:text="@string/edad_del_usuario"
             android:fontFamily="sans-serif-medium"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_spinner_alturaUsuario" />
 
@@ -127,20 +125,18 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textview_edadUsuario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-
-            tools:layout_editor_absoluteY="454dp" />
+            />
 
         <Spinner
             android:id="@+id/otrasconfiguraciones_spinner_alturaUsuario"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textview_alturaUsuario" />
 
@@ -149,11 +145,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Meta Inicial"
+            android:text="@string/meta_inicial"
             android:fontFamily="sans-serif-medium"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             android:id="@+id/otrasconfiguraciones_textview_metaInicial"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -163,17 +159,18 @@
             android:id="@+id/otrasconfiguraciones_spinner_metaInicial"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/marginMuyPeque"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_textview_metaInicial" />
 
         <Button
             android:id="@+id/otrasconfiguraciones_botonConfirmar"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/largoboton1"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="confirmar"
+            android:layout_marginTop="@dimen/margin16"
+            android:text="@string/confirmar"
+            android:backgroundTint="@color/gradienteEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/otrasconfiguraciones_spinner_metaInicial"
