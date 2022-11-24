@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/workoutList"
-        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.WorkoutList"
+        android:name="com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCarpet.WorkoutList"
         android:label="fragment_workout_list"
         tools:layout="@layout/fragment_workout_list" >
         <action

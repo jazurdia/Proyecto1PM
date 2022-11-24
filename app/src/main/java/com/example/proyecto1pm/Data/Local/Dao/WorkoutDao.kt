@@ -18,5 +18,5 @@ interface WorkoutDao {
     fun insertAll(workouts: List<WorkOutEnt>)
 
     @Query("SELECT * FROM WorkOutEnt WHERE name =:name")
-    suspend fun getUniqueWorkout(name: String) : FoodEnt
+    suspend fun getUniqueWorkout(name: String) : WorkOutEnt
 }

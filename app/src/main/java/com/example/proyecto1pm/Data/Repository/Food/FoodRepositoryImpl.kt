@@ -2,7 +2,7 @@ package com.example.proyecto1pm.Data.Repository.Food
 
 import com.example.proyecto1pm.Data.Local.Dao.FoodDao
 import com.example.proyecto1pm.Data.Local.Entity.FoodEnt
-import com.example.proyecto1pm.Data.Remote.Dto.toFoodEnt
+import com.example.proyecto1pm.Data.Remote.Dto.ComidasDto.toFoodEnt
 import com.example.proyecto1pm.Data.Remote.NutricionixAPI
 import com.example.proyecto1pm.Data.Resource
 
