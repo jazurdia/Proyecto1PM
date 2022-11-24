@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionList
 import com.example.proyecto1pm.ui.fragments.user.Progreso
+import com.example.proyecto1pm.ui.fragments.usuario.UsuarioMain
+import com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCarpet.WorkoutList
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -14,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var bottomNav : BottomNavigationView
-    private lateinit var controlador: NavController
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +29,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private fun setListener() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.action_workoutPlans-> controlador.navigate(R.id.action_workoutPlans)
+                R.id.action_workoutPlans-> setFragment(WorkoutList())
                 R.id.action_Alimentacion -> setFragment(AlimentacionList())
-                R.id.action_Progreso -> setFragment(Progreso())
+                R.id.action_Progreso -> setFragment(UsuarioMain())
             }
             true
         }

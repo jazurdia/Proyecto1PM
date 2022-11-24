@@ -13,8 +13,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-@HiltViewModel
-class LoginRegisterViewModel @Inject constructor(
+
+class LoginRegisterViewModel constructor(
     private val repository: AuthRepository
 ) : ViewModel() {
     private val PrivUiState : MutableStateFlow<LoginRegisterUiState> = MutableStateFlow(LoginRegisterUiState.Default)
