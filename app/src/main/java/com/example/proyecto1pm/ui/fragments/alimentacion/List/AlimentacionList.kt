@@ -26,9 +26,6 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
     private val viewModel : AlimentacionListViewModel by viewModels()
     private lateinit var listOfFoods: MutableList<FoodEnt>
 
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

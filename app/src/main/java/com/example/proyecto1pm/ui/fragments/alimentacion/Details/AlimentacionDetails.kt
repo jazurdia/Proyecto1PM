@@ -17,6 +17,7 @@ import coil.load
 import coil.request.CachePolicy
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.databinding.FragmentAlimentacionDetailsBinding
+import com.example.proyecto1pm.ui.adapters.AdapterWorkout
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AdapterComida
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionListUiState
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionListViewModel

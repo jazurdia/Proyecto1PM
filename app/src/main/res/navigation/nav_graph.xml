@@ -36,8 +36,8 @@
         android:label="fragment_workout_details"
         tools:layout="@layout/fragment_workout_details" >
         <argument
-            android:name="excersise"
-            app:argType="com.example.proyecto1pm.Data.database.Excersise" />
+            android:name="Ejercicio"
+            app:argType="com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt" />
     </fragment>
     <fragment
         android:id="@+id/workoutList"

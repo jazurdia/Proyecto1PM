@@ -6,17 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.compose.runtime.toMutableStateList
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
+import com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.databinding.FragmentWorkoutListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class WorkoutList : Fragment(R.layout.fragment_workout_list)  {
+class WorkoutList : Fragment(), AdapterWorkOut.PlaceListener  {
 
     private lateinit var binding : FragmentWorkoutListBinding
     private val viewmodel : WorkoutListViewModel by viewModels()
+    private lateinit var listOfWorkouts : MutableList<WorkOutEnt>
+
 
 
     override fun onCreateView(
@@ -31,7 +36,7 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list)  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setObservers()
-        viewmodel.getWorkouts() // revisar esto.
+        viewmodel.getWorkouts()
     }
 
     private fun setObservers() {
@@ -45,9 +50,13 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list)  {
     private fun handleState(state: WorkoutListUiState) {
         when(state){
             is WorkoutListUiState.Success -> {
+                listOfWorkouts = state.workouts.toMutableStateList()
                 binding.progressBarWorkoutList.visibility = View.GONE
                 binding.toolbarWorkoutList.visibility = View.VISIBLE
                 binding.recyclerWorkouts.visibility = View.VISIBLE
+                binding.recyclerWorkouts.setHasFixedSize(true)
+                binding.recyclerWorkouts.adapter = AdapterWorkOut(listOfWorkouts,this)
+
 
             } is WorkoutListUiState.Loading -> {
                 binding.progressBarWorkoutList.visibility = View.VISIBLE
@@ -70,7 +79,9 @@ class WorkoutList : Fragment(R.layout.fragment_workout_list)  {
 
     }
 
-
+    override fun onPlaceClicked(data: WorkOutEnt, position: Int) {
+        requireView().findNavController().navigate(WorkoutListDirections.actionWorkoutListToWorkoutDetails(data))
+    }
 
 
 }
