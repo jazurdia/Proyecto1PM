@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.proyecto1pm.Data.Local.firebase.FireBaseAuhApiImpl
 import com.example.proyecto1pm.Data.Repository.firebase.AuthRepository
 import com.example.proyecto1pm.Data.Repository.firebase.AuthRepositoryImpl
@@ -73,6 +74,7 @@ class Login : Fragment(R.layout.fragment_login) {
     private fun handleState(state : LoginRegisterUiState){
         when(state){
             is LoginRegisterUiState.Success -> {
+                findNavController().navigate(LoginDirections.actionLoginToWorkoutList())
                 //binding.progressBarLogin.visibility = View.GONE
 
             } is LoginRegisterUiState.Loading -> {
