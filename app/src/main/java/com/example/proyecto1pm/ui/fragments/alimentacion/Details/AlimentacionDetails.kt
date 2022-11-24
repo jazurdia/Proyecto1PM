@@ -59,7 +59,6 @@ class AlimentacionDetails : Fragment() {
                 binding.ProgressBarAlimentacionDetails.visibility = View.GONE
                 binding.textFoodCalories.text = state.entidad.nf_calories.toString()
                 binding.textFoodName.text = state.entidad.food_name
-                binding.textFoodDescription
             }
             is AlimentacionListUiState.Error -> {
                 //Show error

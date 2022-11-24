@@ -3,10 +3,13 @@ package com.example.proyecto1pm.di
 import android.content.Context
 import androidx.room.Room
 import com.example.proyecto1pm.Data.Local.Dao.FoodDao
+import com.example.proyecto1pm.Data.Local.Dao.WorkoutDao
 import com.example.proyecto1pm.Data.Local.databases.FoodsDb
 import com.example.proyecto1pm.Data.Remote.NutricionixAPI
 import com.example.proyecto1pm.Data.Repository.Food.FoodRepository
 import com.example.proyecto1pm.Data.Repository.Food.FoodRepositoryImpl
+import com.example.proyecto1pm.Data.Repository.Workout.WorkoutRepository
+import com.example.proyecto1pm.Data.Repository.Workout.WorkoutRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -70,8 +73,17 @@ object FoodModule {
         api: NutricionixAPI
     ): FoodRepository {
         return FoodRepositoryImpl(
-            localDb =  dao,
+            localDb = dao,
             api = api
         )
     }
+
+    @Provides
+    @Singleton
+    fun provideFakeRepository(dao: WorkoutDao): WorkoutRepository{
+        return WorkoutRepositoryImpl(
+            DaoWorkout = dao,
+        )
+    }
+
 }
