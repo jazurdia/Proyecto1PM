@@ -1,8 +1,6 @@
 package com.example.proyecto1pm.Data.Remote
 
-import com.example.proyecto1pm.Data.Remote.Dto.ResponseFoodDto
-import retrofit2.http.Body
-import retrofit2.http.GET
+import com.example.proyecto1pm.Data.Remote.Dto.ComidasDto.ResponseFoodDto
 import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Query

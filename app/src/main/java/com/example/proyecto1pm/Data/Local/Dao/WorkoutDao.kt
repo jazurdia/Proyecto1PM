@@ -5,6 +5,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt
 import androidx.room.Dao
+import com.example.proyecto1pm.Data.Local.Entity.FoodEnt
 
 
 @Dao
@@ -16,4 +17,6 @@ interface WorkoutDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(workouts: List<WorkOutEnt>)
 
+    @Query("SELECT * FROM WorkOutEnt WHERE name =:name")
+    suspend fun getUniqueWorkout(name: String) : FoodEnt
 }

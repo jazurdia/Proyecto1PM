@@ -11,4 +11,4 @@ data class WorkOutEnt(
     val intensity : String,
     val repetitions : String,
     val series : String,
-)
+): java.io.Serializable

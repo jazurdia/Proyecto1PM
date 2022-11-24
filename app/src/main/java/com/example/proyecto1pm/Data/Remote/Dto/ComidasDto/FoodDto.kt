@@ -1,4 +1,4 @@
-package com.example.proyecto1pm.Data.Remote.Dto
+package com.example.proyecto1pm.Data.Remote.Dto.ComidasDto
 
 import com.example.proyecto1pm.Data.Local.Entity.FoodEnt
 
