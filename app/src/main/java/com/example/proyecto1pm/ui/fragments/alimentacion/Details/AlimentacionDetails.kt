@@ -39,6 +39,7 @@ class AlimentacionDetails : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.getUniqueFood(args.food)
         setObservers()
     }
 
@@ -52,21 +53,30 @@ class AlimentacionDetails : Fragment() {
 
     private fun handleState(state: AlimentacionListUiState) {
         when(state){
-            is AlimentacionListUiState.Success -> {
-
+            is AlimentacionListUiState.SingleSuccess -> {
+                binding.constraintLayoutDetails.visibility = View.VISIBLE
+                binding.ProgressBarAlimentacionDetails.visibility = View.GONE
+                binding.textFoodCalories.text = state.entidad.nf_calories.toString()
+                binding.textFoodName.text = state.entidad.food_name
+                binding.textFoodDescription
             }
             is AlimentacionListUiState.Error -> {
                 //Show error
-
+                binding.constraintLayoutDetails.visibility = View.GONE
+                binding.ProgressBarAlimentacionDetails.visibility = View.GONE
                 Toast.makeText(requireContext(),
                     state.message,
                     Toast.LENGTH_LONG).show()
 
             }
             AlimentacionListUiState.Loading -> {
+                binding.constraintLayoutDetails.visibility = View.GONE
+                binding.ProgressBarAlimentacionDetails.visibility = View.VISIBLE
 
             }
             AlimentacionListUiState.Default -> {
+                binding.constraintLayoutDetails.visibility = View.GONE
+                binding.ProgressBarAlimentacionDetails.visibility = View.GONE
 
             }
         }
