@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -23,7 +24,9 @@ import dagger.hilt.android.AndroidEntryPoint
 class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
     private lateinit var binding : FragmentAlimentacionListBinding
     private val viewModel : AlimentacionListViewModel by viewModels()
-    private lateinit var FoodReq: String
+    private lateinit var listOfFoods: MutableList<FoodEnt>
+
+
 
 
     override fun onCreateView(
@@ -37,10 +40,8 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        FoodReq = binding.inputLayoutAlimantacionListFragment.toString()
         setObservers()
-        viewModel.getFoods(FoodReq)
-
+        setListeners()
     }
 
     private fun setObservers() {
@@ -51,18 +52,28 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
         }
     }
 
+    private fun setListeners(){
+        binding.ButtonBuscar.setOnClickListener {
+            val FoodReq = binding.inputLayoutAlimantacionListFragment.toString()
+            viewModel.getFoods(FoodReq)
+        }
+    }
+
 
 
     private fun handleState(state: AlimentacionListUiState){
         when(state){
             is AlimentacionListUiState.Success -> {
+                listOfFoods = state.foods!!.toMutableList()
+
                 println(state.foods)
                 binding.recyclerAlimentacion.visibility = View.VISIBLE
                 binding.progressBarAlimentacionList.visibility = View.GONE
                 binding.toolbarAlimentacionList.visibility = View.VISIBLE
                 binding.constraintLayoutCalories.visibility = View.VISIBLE
-
-
+                binding.recyclerAlimentacion.layoutManager= LinearLayoutManager(context)
+                binding.recyclerAlimentacion.setHasFixedSize(true)
+                binding.recyclerAlimentacion.adapter = AdapterComida(listOfFoods,this)
             }
             is AlimentacionListUiState.Error -> {
                 //Show error
@@ -91,7 +102,8 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
     }
 
     override fun onPlaceClicked(data: FoodEnt, position: Int) {
-        requireView().findNavController().navigate(AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(data.food_name))
+        requireView().findNavController().navigate(
+            AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(data.food_name))
     }
 
 

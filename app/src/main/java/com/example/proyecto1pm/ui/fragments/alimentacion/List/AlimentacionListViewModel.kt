@@ -37,6 +37,5 @@ class AlimentacionListViewModel @Inject constructor (
                 }
             }
         }
-        //Update state
     }
 }
