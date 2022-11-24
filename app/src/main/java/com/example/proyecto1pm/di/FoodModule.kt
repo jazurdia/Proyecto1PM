@@ -78,12 +78,6 @@ object FoodModule {
         )
     }
 
-    @Provides
-    @Singleton
-    fun provideFakeRepository(dao: WorkoutDao): WorkoutRepository{
-        return WorkoutRepositoryImpl(
-            DaoWorkout = dao,
-        )
-    }
+
 
 }
