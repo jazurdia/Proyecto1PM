@@ -28,7 +28,7 @@ class AdapterWorkOut (
 
             private val name: TextView = view.findViewById(R.id.text_recycler_workout_name)
             private val intensity : TextView = view.findViewById(R.id.text_recycler_workout_intensity)
-            private val image : ImageView = view.findViewById(R.id.text_recycler_workout_intensity)
+            private val image : ImageView = view.findViewById(R.id.text_recycler_workout_image)
             private lateinit var place: WorkOutEnt
 
 
