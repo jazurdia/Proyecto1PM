@@ -2,23 +2,14 @@ package com.example.proyecto1pm.ui.fragments.alimentacion.Details
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
-import coil.load
-import coil.request.CachePolicy
-import com.example.proyecto1pm.R
 import com.example.proyecto1pm.databinding.FragmentAlimentacionDetailsBinding
-import com.example.proyecto1pm.ui.adapters.AdapterWorkout
-import com.example.proyecto1pm.ui.fragments.alimentacion.List.AdapterComida
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionListUiState
 import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionListViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,7 +24,7 @@ class AlimentacionDetails : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAlimentacionDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
