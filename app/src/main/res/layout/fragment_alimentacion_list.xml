@@ -39,7 +39,9 @@
         app:layout_constraintTop_toTopOf="@id/inputLayout_AlimantacionListFragment"
         app:layout_constraintBottom_toBottomOf="@id/inputLayout_AlimantacionListFragment"
         app:layout_constraintStart_toEndOf="@+id/inputLayout_AlimantacionListFragment"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout_Calories"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Buscar"
+        android:backgroundTint="#26A69A"
 
 
         />

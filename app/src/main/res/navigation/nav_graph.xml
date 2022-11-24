@@ -80,9 +80,10 @@
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.Details.AlimentacionDetails"
         android:label="fragment_alimentacion_details"
         tools:layout="@layout/fragment_alimentacion_details" >
+
         <argument
-            android:name="food"
-            app:argType="com.example.proyecto1pm.Data.database.Food" />
+            android:name="FoodName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/alimentacionList"

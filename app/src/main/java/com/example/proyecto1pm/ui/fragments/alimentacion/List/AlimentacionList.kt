@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto1pm.Data.Local.Entity.FoodEnt
 import com.example.proyecto1pm.Data.database.Food
 import com.example.proyecto1pm.Data.database.FoodData
 import com.example.proyecto1pm.R
@@ -19,7 +20,7 @@ import com.example.proyecto1pm.ui.adapters.AdapterFood
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AlimentacionList : Fragment(){
+class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
     private lateinit var binding : FragmentAlimentacionListBinding
     private val viewModel : AlimentacionListViewModel by viewModels()
     private lateinit var FoodReq: String
@@ -87,6 +88,10 @@ class AlimentacionList : Fragment(){
                 binding.constraintLayoutCalories.visibility = View.GONE
             }
         }
+    }
+
+    override fun onPlaceClicked(data: FoodEnt, position: Int) {
+        requireView().findNavController().navigate(AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(data.food_name))
     }
 
 
