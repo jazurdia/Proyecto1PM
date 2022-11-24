@@ -10,6 +10,7 @@ import androidx.compose.runtime.toMutableStateList
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt
 import com.example.proyecto1pm.R
 import com.example.proyecto1pm.databinding.FragmentWorkoutListBinding
@@ -54,7 +55,9 @@ class WorkoutList : Fragment(), AdapterWorkOut.PlaceListener  {
                 binding.progressBarWorkoutList.visibility = View.GONE
                 binding.recyclerWorkouts.visibility = View.VISIBLE
                 binding.recyclerWorkouts.setHasFixedSize(true)
+                binding.recyclerWorkouts.layoutManager = LinearLayoutManager(context)
                 binding.recyclerWorkouts.adapter = AdapterWorkOut(listOfWorkouts,this)
+                binding.recyclerWorkouts.adapter?.notifyDataSetChanged()
 
 
             } is WorkoutListUiState.Loading -> {
