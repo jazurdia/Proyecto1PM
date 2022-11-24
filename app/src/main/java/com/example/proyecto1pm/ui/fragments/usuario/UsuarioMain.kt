@@ -37,7 +37,7 @@ class UsuarioMain : Fragment (R.layout.fragment_usuario_main) {
 
 
             // Recordar que son TextView. Estos son los TextView "editables" a la derecha.
-            username = findViewById(R.id.usuariomain_fotoUsuario)
+            //username = findViewById(R.id.usuariomain_fotoUsuario)
             racha = findViewById(R.id.usuariomain_dias)
             masaPerdida = findViewById(R.id.usuariomain_kgperdidos)
 

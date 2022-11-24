@@ -52,9 +52,9 @@ class WorkoutList : Fragment(), AdapterWorkOut.PlaceListener  {
             is WorkoutListUiState.Success -> {
                 listOfWorkouts = state.workouts.toMutableStateList()
                 binding.progressBarWorkoutList.visibility = View.GONE
-                binding.recyclerWorkouts.visibility = View.VISIBLE
                 binding.recyclerWorkouts.setHasFixedSize(true)
                 binding.recyclerWorkouts.adapter = AdapterWorkOut(listOfWorkouts,this)
+                binding.recyclerWorkouts.visibility = View.VISIBLE
 
 
             } is WorkoutListUiState.Loading -> {
