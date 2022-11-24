@@ -58,19 +58,20 @@
         android:layout_margin="20dp"
 
         >
+
         <TextView
+            android:id="@+id/text_calories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calories"
-            android:id="@+id/text_calories"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="20dp"
-            android:textSize="30dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:fontFamily="sans-serif"
-            />
+            android:text="Calories"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
