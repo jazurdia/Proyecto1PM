@@ -19,6 +19,7 @@ class AdapterWorkOut (
 
         interface PlaceListener {
             fun onPlaceClicked(data: WorkOutEnt, position: Int)
+            // la posición me servirá para saber que putas es en la db
         }
 
         class ViewHolder(
