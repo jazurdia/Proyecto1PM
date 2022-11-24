@@ -24,7 +24,6 @@ class AlimentacionListViewModel @Inject constructor (
 
     fun getFoods(food: String){
         viewModelScope.launch {
-
             PrivUiState.value = AlimentacionListUiState.Loading
             delay(2000)
             val FoodsResult = repository.getFoods(food)

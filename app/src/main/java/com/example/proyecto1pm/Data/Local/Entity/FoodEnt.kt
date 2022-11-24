@@ -10,4 +10,4 @@ data class FoodEnt(
     val brand_name : String,
     val nf_calories : Double,
     val photo : String,
-)
+): java.io.Serializable

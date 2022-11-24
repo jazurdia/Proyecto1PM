@@ -103,7 +103,7 @@ class AlimentacionList : Fragment(),AdapterComida.PlaceListener{
 
     override fun onPlaceClicked(data: FoodEnt, position: Int) {
         requireView().findNavController().navigate(
-            AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(data.food_name))
+            AlimentacionListDirections.actionAlimentacionList3ToAlimentacionDetails(data))
     }
 
 
