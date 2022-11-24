@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.request.CachePolicy
 import com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt
-import com.example.proyecto1pm.Data.Remote.Dto.WorkoutDto
 import com.example.proyecto1pm.R
 
 class AdapterWorkOut (

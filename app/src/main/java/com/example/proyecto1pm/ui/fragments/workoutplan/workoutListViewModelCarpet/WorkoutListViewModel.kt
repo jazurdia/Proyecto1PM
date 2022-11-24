@@ -2,9 +2,10 @@ package com.example.proyecto1pm.ui.fragments.workoutplan.workoutListViewModelCar
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.proyecto1pm.Data.Remote.Dto.WorkoutDto
+import com.example.proyecto1pm.Data.Local.Entity.WorkOutEnt
 import com.example.proyecto1pm.Data.Repository.Workout.WorkoutRepository
 import com.example.proyecto1pm.Data.Resource
+import com.example.proyecto1pm.ui.fragments.alimentacion.List.AlimentacionListUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -34,12 +35,29 @@ class WorkoutListViewModel @Inject constructor(
                     PrivUiState.value = WorkoutListUiState.Error(WorkoutsResult.message ?:"")
                 }
                 is Resource.Success ->{
-                    PrivUiState.value = WorkoutListUiState.Success((WorkoutsResult.data ?: listOf()) as List<WorkoutDto>)
+                    PrivUiState.value = WorkoutListUiState.Success((WorkoutsResult.data ?: listOf()))
                 }
             }
 
 
         }
         //Update state
+    }
+
+    fun getSingleWorkout(Ejercicio : WorkOutEnt?){
+        viewModelScope.launch {
+            PrivUiState.value = WorkoutListUiState.Loading
+            delay(2000)
+            val FoodsResult = repository.getUniqueWorkout(Ejercicio!!)
+            when(FoodsResult){
+                is Resource.Error ->{
+                    PrivUiState.value = WorkoutListUiState.Error(FoodsResult.message ?:"")
+                }
+                is Resource.Success ->{
+                    PrivUiState.value = WorkoutListUiState.SingleWSuccess(FoodsResult.data!!)
+                }
+            }
+        }
+
     }
 }
