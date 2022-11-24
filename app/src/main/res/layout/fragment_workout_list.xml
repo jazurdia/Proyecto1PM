@@ -6,26 +6,19 @@
     android:id="@+id/constraintLayoutWorkoutDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradiente_verde_azulado"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.workoutplan.workoutListViewModelCarpet.WorkoutList">
 
-    >
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar_workoutList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/recycler_workouts"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_workoutList"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/recycler_item_workout"
+        android:background="@drawable/background_gradiente_verde_azulado"
         />
 
     <ProgressBar

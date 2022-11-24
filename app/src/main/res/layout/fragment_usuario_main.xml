@@ -15,6 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -28,7 +29,7 @@
 
         android:text="@string/username"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="@dimen/sizeGrande"
 
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +40,11 @@
         android:id="@+id/usuariomain_rachaFijo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Racha:  "
+        android:layout_marginStart="@dimen/margin50"
+        android:layout_marginTop="@dimen/marginPeque"
+        android:text="@string/racha"
         android:textColor="@color/white"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="50dp"
+        android:textSize="@dimen/sizeMaso"
         app:layout_constraintStart_toStartOf="@+id/usuariomain_username"
         app:layout_constraintTop_toBottomOf="@+id/usuariomain_username" />
 
@@ -50,9 +52,10 @@
         android:id="@+id/usuariomain_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="14 días"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="@dimen/margin50"
+        android:text="@string/_14_d_as"
         android:textColor="@color/white"
+        android:textSize="@dimen/sizeMaso"
         app:layout_constraintEnd_toEndOf="@+id/usuariomain_username"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_rachaFijo" />
 
@@ -60,9 +63,10 @@
         android:id="@+id/usuariomain_kgperdidosFijo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="KG perdidos"
+        android:layout_marginTop="@dimen/marginPeque"
+        android:text="@string/kg_perdidos"
         android:textColor="@color/white"
+        android:textSize="@dimen/sizeMaso"
 
         app:layout_constraintStart_toStartOf="@+id/usuariomain_rachaFijo"
         app:layout_constraintTop_toBottomOf="@+id/usuariomain_rachaFijo" />
@@ -71,8 +75,8 @@
         android:id="@+id/usuariomain_kgperdidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5"
-
+        android:text="@string/_5"
+        android:textSize="@dimen/sizeMaso"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/usuariomain_dias"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_kgperdidosFijo" />
@@ -91,18 +95,12 @@
         android:id="@+id/usuariomain_objetivoUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:text="Objetivos del usuario"
+        android:text="@string/objetivos_del_usuario"
         android:textColor="@color/white"
-
-
-        android:textSize="20dp"
+        android:textSize="@dimen/sizeMediano"
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoObjetivoUsuario"
-        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoObjetivoUsuario"
-
-        app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoObjetivoUsuario"
-
-        />
+        app:layout_constraintEnd_toEndOf="@+id/usuariomain_username"
+        app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoObjetivoUsuario" />
 
     <ImageButton
         android:id="@+id/usuariomain_iconoActualizarDatos"
@@ -118,14 +116,13 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:text="@string/actuilizar_datos"
         android:textColor="@color/white"
 
-        android:textSize="20dp"
+        android:textSize="@dimen/sizeMediano"
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoActualizarDatos"
-        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoActualizarDatos"
 
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_objetivoUsuario"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoActualizarDatos"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -142,13 +139,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
         android:text="@string/otras_configuraciones"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="@dimen/sizeMediano"
 
         app:layout_constraintBottom_toBottomOf="@+id/usuariomain_iconoConfiguraciones"
-        app:layout_constraintStart_toEndOf="@+id/usuariomain_iconoConfiguraciones"
+        app:layout_constraintStart_toStartOf="@+id/usuariomain_objetivoUsuario"
         app:layout_constraintTop_toTopOf="@+id/usuariomain_iconoConfiguraciones"
         app:layout_constraintVertical_bias="0.0" />
 

@@ -6,17 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.usuario.UsuarioSecond"
     android:background="@drawable/background_gradiente_verde_azulado"
+    android:layout_gravity="center_vertical"
     >
 
     <TextView
         android:id="@+id/usuariosecond_objetivosPrincipales_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objetivos Principales"
+        android:text="@string/objetivos_principales"
         android:fontFamily="sans-serif-black"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_margin="32dp"
+        android:textSize="32sp"
+        android:layout_marginStart="@dimen/marginEstandar"
+        android:layout_marginEnd="@dimen/sizeGrande"
+        android:layout_marginTop="@dimen/size30"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -25,24 +28,28 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/usuariosecond_constraintLayout"
         android:layout_width="350dp"
-        android:layout_height="330dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin20"
         android:layout_marginTop="16dp"
         android:elevation="8dp"
+
         android:background="@drawable/background_usuariosecond_objetivosprincipales"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuariosecond_objetivosPrincipales_TextView">
 
+
+
         <TextView
             android:id="@+id/usuariosecond_pesoinicialfijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="@dimen/margin40"
+            android:layout_marginTop="@dimen/margin20"
             android:text="@string/peso_inicial"
 
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,11 +57,11 @@
             android:id="@+id/usuariosecond_pesoactualfijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Peso Actual: "
+            android:layout_marginTop="@dimen/margin20"
+            android:text="@string/peso_actual"
             android:textColor="@color/white"
 
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_pesoinicialfijo"
             app:layout_constraintTop_toBottomOf="@+id/usuariosecond_pesoinicialfijo" />
 
@@ -62,11 +69,11 @@
             android:id="@+id/usuariosecond_pesodeseadofijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Peso Deseado: "
+            android:layout_marginTop="@dimen/margin20"
+            android:text="@string/peso_deseado"
             android:textColor="@color/white"
 
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_pesoactualfijo"
             app:layout_constraintTop_toBottomOf="@+id/usuariosecond_pesoactualfijo" />
 
@@ -74,11 +81,11 @@
             android:id="@+id/usuariosecond_objetivoSemanalFijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Objetivo Semanal: "
+            android:layout_marginTop="@dimen/margin20"
+            android:text="@string/objetivo_semanal"
             android:textColor="@color/white"
 
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_pesodeseadofijo"
             app:layout_constraintTop_toBottomOf="@+id/usuariosecond_pesodeseadofijo" />
 
@@ -86,11 +93,11 @@
             android:id="@+id/usuariosecond_nivelActividadFijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Nivel Actividad: "
+            android:layout_marginTop="@dimen/margin20"
+            android:text="@string/nivel_actividad"
             android:textColor="@color/white"
 
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_objetivoSemanalFijo"
             app:layout_constraintTop_toBottomOf="@+id/usuariosecond_objetivoSemanalFijo" />
 
@@ -98,13 +105,11 @@
             android:id="@+id/usuariosecond_EnfoqueActualFijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            android:text="Enfoque Actual: "
+            android:layout_marginTop="@dimen/margin20"
+            android:text="@string/enfoque_actual"
 
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_nivelActividadFijo"
             app:layout_constraintTop_toBottomOf="@id/usuariosecond_nivelActividadFijo" />
 
@@ -176,11 +181,11 @@
         android:id="@+id/usuariosecond_ObjetivosSecundarios_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Objetivos de Bienestar y forma física"
+        android:text="@string/objetivos_de_bienestar_y_forma_f_sica"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/sizeMaso"
         android:fontFamily="sans-serif-black"
-        android:layout_margin="32dp"
+        android:layout_margin="@dimen/marginEstandar"
         app:layout_constraintTop_toBottomOf="@+id/usuariosecond_constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -188,8 +193,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/usuariosecond_constraintLayout2"
         android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin20"
+
         android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,10 +206,10 @@
             android:id="@+id/usuariosecond_sesionesPorSemanaFijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:text="Sesiones por semana: "
+            android:layout_marginStart="@dimen/margin40"
+            android:text="@string/sesiones_por_semana"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -211,9 +217,9 @@
             android:id="@+id/usuariosecond_MinutosPorSesionFijo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Minutos por sesión: "
+            android:text="@string/minutos_por_sesi_n"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="@id/usuariosecond_sesionesPorSemanaFijo"
             app:layout_constraintTop_toBottomOf="@id/usuariosecond_sesionesPorSemanaFijo" />
@@ -225,8 +231,8 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginEnd="40dp"
+            android:textSize="@dimen/sizeMaso"
+            android:layout_marginEnd="@dimen/margin40"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/usuariosecond_sesionesPorSemanaFijo" />
 
@@ -234,9 +240,9 @@
             android:id="@+id/usuariosecond_MinutosPorSesion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/_0"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sizeMaso"
             app:layout_constraintEnd_toEndOf="@id/usuariosecond_sesionesPorSemana"
             app:layout_constraintTop_toTopOf="@+id/usuariosecond_MinutosPorSesionFijo" />
 

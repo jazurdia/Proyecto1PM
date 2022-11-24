@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sign_in"
             android:textSize="@dimen/sizePeque"
-            android:backgroundTint="#26A69A"
+            android:backgroundTint="@color/colorBotones"
             android:textColor="@drawable/pressed"
 
 

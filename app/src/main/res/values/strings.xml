@@ -37,6 +37,29 @@
     <string name="edad_del_usuario">Edad del usuario</string>
     <string name="meta_inicial">Meta Inicial</string>
     <string name="confirmar">confirmar</string>
+    <string name="racha">Racha:</string>
+    <string name="_14_d_as">14 días</string>
+    <string name="kg_perdidos">KG perdidos</string>
+    <string name="_5">5</string>
+    <string name="objetivos_del_usuario">Objetivos del usuario</string>
+    <string name="objetivos_principales">Objetivos Principales</string>
+    <string name="enfoque_actual">Enfoque Actual:</string>
+    <string name="peso_actual">Peso Actual:</string>
+    <string name="peso_deseado">Peso Deseado:</string>
+    <string name="objetivo_semanal">Objetivo Semanal:</string>
+    <string name="nivel_actividad">Nivel Actividad:</string>
+    <string name="objetivos_de_bienestar_y_forma_f_sica">Objetivos de Bienestar y forma física</string>
+    <string name="sesiones_por_semana">Sesiones por semana:</string>
+    <string name="minutos_por_sesi_n">Minutos por sesión:</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="reps">Reps</string>
+    <string name="steps">Steps</string>
+    <string name="description2">Description</string>
+    <string name="imagen_de_la_comida">imagen de la comida</string>
+    <string name="food_name2">Food Name</string>
+    <string name="calories3">Calories</string>
+    <string name="workout_name2">Workout Name</string>
+    <string name="intensity">Intensity</string>
 
 
     <string-array name="enfoque_del_usuario_array">

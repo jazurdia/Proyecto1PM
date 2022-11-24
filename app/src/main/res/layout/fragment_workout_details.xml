@@ -4,18 +4,11 @@
     android:id="@+id/constraintLayoutWorkoutDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradiente_verde_azulado"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.workoutplan.workoutListViewModelCarpet.WorkoutList">
     
-    <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar_workoutDetails"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/constraintLayoutDetails2"
-        />
+
 
     <ProgressBar
         android:layout_width="100dp"
@@ -34,9 +27,10 @@
         android:background="@drawable/background_workout_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_workoutDetails"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
+        android:backgroundTint="@color/gradienteCenter"
         >
 
 
@@ -44,12 +38,12 @@
             android:id="@+id/text_workoutName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Workout Name"
+            android:text="@string/workout_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="20dp"
-            android:textSize="20dp"
-            android:textColor="@color/black"
+            android:textSize="@dimen/sizeMaso"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
 
@@ -58,12 +52,13 @@
             android:id="@+id/text_workoutReps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reps"
+            android:text="@string/reps"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_workoutName"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginTop="@dimen/marginPeque"
+            android:textSize="@dimen/sizeMaso"
             android:fontFamily="sans-serif-medium"
             />
         <ImageView
@@ -75,19 +70,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
             tools:srcCompat="@tools:sample/avatars"
-            />
+            android:contentDescription="@string/imagen_de_la_comida" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Steps"
+            android:text="@string/steps"
             android:id="@+id/text_workoutDescription"
             app:layout_constraintTop_toBottomOf="@id/image_workout"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:textSize="16dp"
+            android:textSize="@dimen/sizePeque"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif-medium"
 
             />
@@ -96,6 +91,7 @@
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+
             android:background="?android:attr/listDivider"
             app:layout_constraintTop_toBottomOf="@id/text_workoutDescription"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,13 +100,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="@string/description2"
             android:id="@+id/text_workoutSteps"
             app:layout_constraintTop_toBottomOf="@id/divider"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="@dimen/sizeMaso"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             />
 
