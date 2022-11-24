@@ -10,20 +10,41 @@ import kotlinx.coroutines.tasks.await
 class FireBaseAuhApiImpl : AuthApi {
     override suspend fun singInFB(email: String, password: String) : Resource<String> {
 
-        try{
-
+        try {
             val auth = Firebase.auth
-            val response = auth.signInWithEmailAndPassword(email, password).await()
-            val userInfo = response.user
-            return if(userInfo != null) {
-                Resource.Success(userInfo.uid)
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                val result = auth.signInWithEmailAndPassword(email, password).await()
+                if (result.user != null) {
+                    return Resource.Success(result.user!!.uid)
+                } else {
+                    return Resource.Error("Error al iniciar sesion")
+                }
             } else {
-                Resource.Error("Error al iniciar sesion")
+                return Resource.Error("Error al iniciar sesion")
             }
-        } catch (e: Exception){
-            return Resource.Error(e.message ?: "Error al iniciar sesion")
-        }
 
+        } catch (e: Exception) {
+            return Resource.Error("Error desconocido")
+        }
+    }
+
+    override suspend fun singUpFB(email: String, password: String): Resource<String> {
+        try {
+            val auth = Firebase.auth
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                val result = auth.createUserWithEmailAndPassword(email, password).await()
+                if (result.user != null) {
+                    return Resource.Success(result.user!!.uid)
+                } else {
+                    return Resource.Error("Error al iniciar sesion")
+                }
+            } else {
+                return Resource.Error("Error al iniciar sesion")
+            }
+
+        } catch (e: Exception) {
+            return Resource.Error("Error desconocido")
+        }
     }
 
 

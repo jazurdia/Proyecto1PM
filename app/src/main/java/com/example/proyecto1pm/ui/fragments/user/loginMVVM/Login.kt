@@ -1,106 +1,88 @@
 package com.example.proyecto1pm.ui.fragments.user.loginMVVM
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
+import com.example.proyecto1pm.Data.Local.firebase.FireBaseAuhApiImpl
 import com.example.proyecto1pm.Data.Repository.firebase.AuthRepository
+import com.example.proyecto1pm.Data.Repository.firebase.AuthRepositoryImpl
 import com.example.proyecto1pm.R
-import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.auth.FirebaseAuth
+import com.example.proyecto1pm.databinding.FragmentLoginBinding
+
 
 
 class Login : Fragment(R.layout.fragment_login) {
 
-    private lateinit var inputEmail: TextInputLayout
-    private lateinit var inputPassword: TextInputLayout
-    private lateinit var buttonLogin: Button
-    private lateinit var signupbtn: Button
-    private var viewModel: LoginRegisterViewModel by viewModels()
     private lateinit var authRepository: AuthRepository
-    private lateinit var myprogressbar: ProgressBar
+    private lateinit var viewModel: LoginRegisterViewModel
+    private lateinit var binding : FragmentLoginBinding
 
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        authRepository = AuthRepositoryImpl(FireBaseAuhApiImpl())
+        viewModel = LoginRegisterViewModel(authRepository)
+
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.apply {
-            inputEmail = findViewById(R.id.login_email)
-            inputPassword = findViewById(R.id.login_password)
-            buttonLogin = findViewById(R.id.login_continuarbtn)
-            signupbtn = findViewById(R.id.login_signupbtn)
+
+        setListeners()
+        setObservers()
+
+    }
+
+    private fun setListeners() {
+        // sign in
+        binding.loginContinuarbtn.setOnClickListener {
+            val email = binding.loginEmail.editText?.text.toString()
+            val password = binding.loginPassword.editText?.text.toString()
+            viewModel.signIn(email, password)
         }
-        requireActivity().findViewById<View>(R.id.bottom_navigation).visibility = View.GONE
 
-        // métodos
-        acceder2()
-        irARegistro()
-
+        // sign up
+        binding.loginSignupbtn.setOnClickListener {
+            val email = binding.loginEmail.editText?.text.toString()
+            val password = binding.loginPassword.editText?.text.toString()
+            viewModel.signUp(email, password)
+        }
 
     }
 
-    private fun navigateToWorkoutScreen() {
-        requireView().findNavController().navigate(R.id.action_login_to_workoutList) //Se debe modificar navigate() por que esta forma no puede compartir parámetros.
-    }
-
-    private fun navigateToRegistroScreen() {
-        requireView().findNavController().navigate(
-            LoginDirections.actionLoginToRegistro()
-        )
-    }
-
-    // Métodos de Firebase
-    // Tal vez se queden sin usar otros métodos.
-    private fun acceder(){
-        buttonLogin.setOnClickListener(){
-            if(inputEmail.editText!!.text.toString().isNotEmpty() && inputPassword.editText!!.text.toString().isNotEmpty()){
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(inputEmail.editText!!.text.toString(), inputPassword.editText!!.text.toString()).addOnCompleteListener {
-                    if(it.isSuccessful){
-                        navigateToWorkoutScreen()
-                    }else{
-                        Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }else{
-                Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
+    private fun setObservers() {
+        lifecycleScope.launchWhenStarted {
+            viewModel.PublicUiState.collect { state ->
+                handleState(state)
             }
         }
     }
 
-    private fun acceder2(){
-        buttonLogin.setOnClickListener{
-            var email : String = inputEmail.editText!!.text.toString()
-            var password : String = inputPassword.editText!!.text.toString()
-            email = email.replace(" ", "")
+    private fun handleState(state : LoginRegisterUiState){
+        when(state){
+            is LoginRegisterUiState.Success -> {
+                // ir a la siguiente pantalla.
+                requireView().findNavController().navigate(R.id.action_login_to_workoutList)
 
-            if(email.isNotEmpty() && password.isNotEmpty()) {
-                FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            navigateToWorkoutScreen()
-                        } else {
-                            Toast.makeText(
-                                requireContext(),
-                                "El usuario o la contraseña no son correctos",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
-            }else{
-                Toast.makeText(requireContext(), "El usuario o la contraseña no son correctos", Toast.LENGTH_SHORT).show()
+            } is LoginRegisterUiState.Loading -> {
+                // xddddd
+
+            } is LoginRegisterUiState.Error -> {
+                Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
+                // espero que sea un mensaje de error jajaja
+
             }
         }
     }
-
-    private fun irARegistro(){
-        signupbtn.setOnClickListener(){
-            navigateToRegistroScreen()
-        }
-    }
-
-
 }

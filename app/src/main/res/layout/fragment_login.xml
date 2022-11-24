@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.user.loginMVVM.Login"
     android:background="#1B6962"
-    >
+    android:id="@+id/login_fragment">
+
 
     <!-- Asi se pone un comentario.  -->
 
