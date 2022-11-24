@@ -66,11 +66,6 @@
             app:destination="@id/usuarioSecond" />
     </fragment>
     <fragment
-        android:id="@+id/progreso"
-        android:name="com.example.proyecto1pm.ui.fragments.user.Progreso"
-        android:label="fragment_progreso"
-        tools:layout="@layout/fragment_progreso" />
-    <fragment
         android:id="@+id/usuarioSecond"
         android:name="com.example.proyecto1pm.ui.fragments.usuario.UsuarioSecond"
         android:label="fragment_usuario_second"
@@ -80,10 +75,9 @@
         android:name="com.example.proyecto1pm.ui.fragments.alimentacion.Details.AlimentacionDetails"
         android:label="fragment_alimentacion_details"
         tools:layout="@layout/fragment_alimentacion_details" >
-
         <argument
-            android:name="FoodName"
-            app:argType="string" />
+            android:name="Food"
+            app:argType="com.example.proyecto1pm.Data.Local.Entity.FoodEnt" />
     </fragment>
     <fragment
         android:id="@+id/alimentacionList"
