@@ -16,6 +16,21 @@
     <string name="enfoque_del_usuario">Enfoque del usuario</string>
     <string name="masa_del_usuario">Masa del usuario</string>
     <string name="peso_inicial">Peso Inicial:</string>
+    <string name="food_name">Food Name</string>
+    <string name="calories">Calories</string>
+    <string name="steps_for_elaboration">Steps for elaboration</string>
+    <string name="description">Description</string>
+    <string name="busca_tu_comida_aqu">Busca tu comida aquí</string>
+    <string name="buscar">Buscar</string>
+    <string name="calories2">Calories</string>
+    <string name="_0">0</string>
+    <string name="remaining">Remaining</string>
+    <string name="consumed">Consumed</string>
+    <string name="burned">Burned</string>
+    <string name="logo_elevate">logo Elevate</string>
+    <string name="introduce_tu_contrase_a">Introduce tu contraseña</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
 
 
     <string-array name="enfoque_del_usuario_array">
