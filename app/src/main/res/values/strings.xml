@@ -31,6 +31,7 @@
     <string name="introduce_tu_contrase_a">Introduce tu contraseña</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_up">Sign up</string>
+    <string name="inicia_sesi_n_o_reg_strate">Inicia sesión o Regístrate</string>
 
 
     <string-array name="enfoque_del_usuario_array">

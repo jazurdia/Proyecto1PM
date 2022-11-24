@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="largoboton1">140dp</dimen>
+    <dimen name="marginEstandar">32dp</dimen>
+    <dimen name="sizeGrande">40sp</dimen>
+    <dimen name="sizeMediano">24sp</dimen>
+    <dimen name="marginPeque">20dp</dimen>
+    <dimen name="sizePeque">16sp</dimen>
+    <dimen name="sizeMuyPeque">12sp</dimen>
+    <dimen name="marginMuyPeque">12dp</dimen>
+
+
+</resources>

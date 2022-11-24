@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorBotones">#26A69A</color>
+    <color name="gradienteStart">#56BABA</color>
+    <color name="gradienteCenter">#3D8079</color>
+    <color name="gradienteEnd">#022F30</color>
+
+    <color name=""></color>
+    <color name=""></color>
+    <color name=""></color>
+    <color name=""></color>
+    <color name=""></color>
+
+
+
+
+
 </resources>
